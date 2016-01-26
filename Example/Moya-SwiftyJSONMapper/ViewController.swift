@@ -7,18 +7,50 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        coreObjectMapping()
+        reactiveCocoaObjectMapping()
+        rxSwiftObjectMapping()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func coreObjectMapping(){
+        stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
+            switch result {
+            case let .Success(response):
+                do {
+                    let getResponseObject = try response.mapObject(GetResponse)
+                    print(getResponseObject)
+                } catch {
+                    print(error)
+                }
+            case let .Failure(error):
+                print(error)
+            }
+        }
     }
-
+    
+    func reactiveCocoaObjectMapping(){
+        RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed: { (error) -> () in
+            print(error)
+        }) { (response) -> () in
+            print(response)
+        }.start()
+    }
+    
+    func rxSwiftObjectMapping(){
+        let disposeBag = DisposeBag()
+        RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
+            print(response)
+        }, onError: { (error) -> Void in
+            print(error)
+        }).addDisposableTo(disposeBag)
+    }
 }
 
