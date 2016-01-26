@@ -24,7 +24,7 @@ extension SignalProducerType where Value == Moya.Response, Error == Moya.Error {
     /// If the conversion fails, the signal errors.
     public func mapArray<T: ALSwiftyJSONAble>(type: T.Type) -> SignalProducer<[T], Error> {
         return producer.flatMap(.Latest) { response -> SignalProducer<[T], Error> in
-            return unwrapThrowable { try response.mapArray() }
+            return unwrapThrowable { try response.mapArray(T) }
         }
     }
 }

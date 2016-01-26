@@ -25,7 +25,7 @@ public extension Response {
 
     /// Maps data received from the signal into an array of objects which implement the ALSwiftyJSONAble protocol
     /// If the conversion fails, the signal errors.
-    public func mapArray<T: ALSwiftyJSONAble>() throws -> [T] {
+    public func mapArray<T: ALSwiftyJSONAble>(type:T.Type) throws -> [T] {
         let jsonObject = try mapJSON()
         
         let mappedArray:JSON = JSON(jsonObject)
