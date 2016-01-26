@@ -1,0 +1,6 @@
+framework module Pods_Moya_SwiftyJSONMapper_Tests {
+  umbrella header "Pods-Moya-SwiftyJSONMapper_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

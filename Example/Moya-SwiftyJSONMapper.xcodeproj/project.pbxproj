@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		61A9F1F0E4C0E7557DD75E01 /* Pods_Moya_SwiftyJSONMapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDDBA8975DD89C89DA0D7C4 /* Pods_Moya_SwiftyJSONMapper_Example.framework */; };
+		73289B571C57D5BC002B25C9 /* ExampleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73289B561C57D5BC002B25C9 /* ExampleAPI.swift */; };
 		C235C69FCC29EDD2F954B142 /* Pods_Moya_SwiftyJSONMapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F873ACCC21239179AA762 /* Pods_Moya_SwiftyJSONMapper_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6CDDBA8975DD89C89DA0D7C4 /* Pods_Moya_SwiftyJSONMapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya_SwiftyJSONMapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73289B561C57D5BC002B25C9 /* ExampleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAPI.swift; sourceTree = "<group>"; };
 		A1C6C3DBB566E94DAD186682 /* Pods-Moya-SwiftyJSONMapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-SwiftyJSONMapper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-SwiftyJSONMapper_Tests/Pods-Moya-SwiftyJSONMapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C9ED04BFF222533D6840CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B87B4B79C8D4F5C1E2040650 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		607FACD21AFB9204008FA782 /* Example for Moya-SwiftyJSONMapper */ = {
 			isa = PBXGroup;
 			children = (
+				73289B561C57D5BC002B25C9 /* ExampleAPI.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -361,6 +364,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				73289B571C57D5BC002B25C9 /* ExampleAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

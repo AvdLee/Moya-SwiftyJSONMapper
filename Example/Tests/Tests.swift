@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import Moya-SwiftyJSONMapper
+import Moya_SwiftyJSONMapper
 
 class Tests: XCTestCase {
     
@@ -24,6 +24,10 @@ class Tests: XCTestCase {
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testReactiveCocoa(){
+        
     }
     
 }

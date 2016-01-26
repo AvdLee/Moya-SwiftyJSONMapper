@@ -3,10 +3,13 @@ use_frameworks!
 
 target 'Moya-SwiftyJSONMapper_Example', :exclusive => true do
   pod 'Moya-SwiftyJSONMapper', :path => '../'
+  pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
+  pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
 end
 
 target 'Moya-SwiftyJSONMapper_Tests', :exclusive => true do
   pod 'Moya-SwiftyJSONMapper', :path => '../'
-
+  pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
+  pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
   
 end
