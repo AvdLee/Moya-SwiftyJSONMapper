@@ -11,23 +11,30 @@ import SwiftyJSON
 
 public extension Response {
 
-  /// Maps data received from the signal into an object which implements the Mappable protocol.
-  /// If the conversion fails, the signal errors.
-  public func mapObject<T: Mappable>() throws -> T {
-    guard let object = Mapper<T>().map(try mapJSON()) else {
-      throw Error.JSONMapping(self)
+    /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
+    /// If the conversion fails, the signal errors.
+    public func mapObject<T: ALSwiftyJSONAble>() throws -> T {
+        let jsonObject = try mapJSON()
+        
+        guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
+            throw Error.JSONMapping(self)
+        }
+        
+        return mappedObject
     }
-   return object
-  }
 
-  /// Maps data received from the signal into an array of objects which implement the Mappable
-  /// protocol.
-  /// If the conversion fails, the signal errors.
-  public func mapArray<T: Mappable>() throws -> [T] {
-    guard let objects = Mapper<T>().mapArray(try mapJSON()) else {
-      throw Error.JSONMapping(self)
+    /// Maps data received from the signal into an array of objects which implement the ALSwiftyJSONAble protocol
+    /// If the conversion fails, the signal errors.
+    public func mapArray<T: ALSwiftyJSONAble>() throws -> [T] {
+        let jsonObject = try mapJSON()
+        
+        let mappedArray:JSON = JSON(jsonObject)
+        let mappedObjectsArray = mappedArray.arrayValue
+            .map({ T(jsonData: $0) }) // Map to T
+            .filter({ $0 != nil }) // Filter out failed objects
+            .map({ $0! }) // Cast to non optionals array
+        
+        return mappedObjectsArray
     }
-    return objects
-  }
 
 }
