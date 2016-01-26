@@ -1,6 +1,9 @@
 import UIKit
 import XCTest
 import Moya_SwiftyJSONMapper
+import Moya
+
+@testable import Moya_SwiftyJSONMapper_Example
 
 class Tests: XCTestCase {
     
@@ -26,8 +29,33 @@ class Tests: XCTestCase {
         }
     }
     
-    func testReactiveCocoa(){
+    func testCoreMappingObject(){
+        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse.")
         
+        var getResponseObject:GetResponse?
+        var errorValue:ErrorType?
+        
+        let cancellableRequest:Cancellable = provider.request(ExampleAPI.Get) { (result) -> () in
+            switch result {
+            case let .Success(response):
+                do {
+                    getResponseObject = try response.mapObject(GetResponse)
+                    expectation.fulfill()
+                } catch {
+                    expectation.fulfill()
+                }
+            case let .Failure(error):
+                errorValue = error
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectationsWithTimeout(10.0) { (error) in
+            XCTAssertNil(errorValue, "We have an unexpected error value")
+            XCTAssertNotNil(getResponseObject, "We should have a parsed getResponseObject")
+            
+            cancellableRequest.cancel()
+        }
     }
     
 }

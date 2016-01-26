@@ -9,14 +9,14 @@
 import Foundation
 import Moya
 
-let provider: MoyaProvider<ExampleAPI>!
+let provider =  MoyaProvider<ExampleAPI>()
 
 enum ExampleAPI {
     case Get
 }
 
 extension ExampleAPI: TargetType {
-    var baseURL: NSURL { return NSURL(string: "http://httpbin.org")! }
+    var baseURL: NSURL { return NSURL(string: "https://httpbin.org")! }
     var path: String {
         switch self {
         case .Get:
