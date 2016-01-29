@@ -9,15 +9,30 @@
 import UIKit
 import Moya
 import RxSwift
+import ReactiveCocoa
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        exampleRequestDirectMapping()
         coreObjectMapping()
         reactiveCocoaObjectMapping()
         rxSwiftObjectMapping()
+    }
+    
+    func exampleRequestDirectMapping(){
+        // This doesn't work:
+//        requestType(ExampleAPI.GetObject).on { (object) -> () in
+//            print("Example origin \(object.origin)")
+//        }.start()
+        
+        // This instead works, with type definition
+        let producer:SignalProducer<GetResponse, Moya.Error> = requestType(ExampleAPI.GetObject).on { (object) -> () in
+            print("Example origin \(object.origin)")
+        }
+        producer.start()
     }
     
     func coreObjectMapping(){
