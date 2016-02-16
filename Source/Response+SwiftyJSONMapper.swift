@@ -28,11 +28,8 @@ public extension Response {
     public func mapArray<T: ALSwiftyJSONAble>(type:T.Type) throws -> [T] {
         let jsonObject = try mapJSON()
         
-        let mappedArray:JSON = JSON(jsonObject)
-        let mappedObjectsArray = mappedArray.arrayValue
-            .map({ T(jsonData: $0) }) // Map to T
-            .filter({ $0 != nil }) // Filter out failed objects
-            .map({ $0! }) // Cast to non optionals array
+        let mappedArray = JSON(jsonObject)
+        let mappedObjectsArray = mappedArray.arrayValue.flatMap { $0 }
         
         return mappedObjectsArray
     }
