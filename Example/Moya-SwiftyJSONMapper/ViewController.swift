@@ -23,11 +23,6 @@ class ViewController: UIViewController {
     }
     
     func exampleRequestDirectMapping(){
-        // This doesn't work:
-//        requestType(ExampleAPI.GetObject).on { (object) -> () in
-//            print("Example origin \(object.origin)")
-//        }.start()
-        
         // This instead works, with type definition
         let producer:SignalProducer<GetResponse, Moya.Error> = requestType(ExampleAPI.GetObject).on { (object) -> () in
             print("Example origin \(object.origin)")

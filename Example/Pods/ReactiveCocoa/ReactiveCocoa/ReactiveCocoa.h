@@ -62,28 +62,30 @@ FOUNDATION_EXPORT const unsigned char ReactiveCocoaVersionString[];
 #import "RACUnit.h"
 
 #if TARGET_OS_WATCH
-#elif TARGET_OS_TV
-#elif TARGET_OS_IPHONE
-	#import "MKAnnotationView+RACSignalSupport.h"
-	#import "UIActionSheet+RACSignalSupport.h"
-	#import "UIAlertView+RACSignalSupport.h"
-	#import "UIBarButtonItem+RACCommandSupport.h"
+#elif TARGET_OS_IOS || TARGET_OS_TV
 	#import "UIButton+RACCommandSupport.h"
 	#import "UICollectionReusableView+RACSignalSupport.h"
 	#import "UIControl+RACSignalSupport.h"
-	#import "UIDatePicker+RACSignalSupport.h"
 	#import "UIGestureRecognizer+RACSignalSupport.h"
-	#import "UIImagePickerController+RACSignalSupport.h"
-	#import "UIRefreshControl+RACCommandSupport.h"
 	#import "UISegmentedControl+RACSignalSupport.h"
-	#import "UISlider+RACSignalSupport.h"
-	#import "UIStepper+RACSignalSupport.h"
-	#import "UISwitch+RACSignalSupport.h"
 	#import "UITableViewCell+RACSignalSupport.h"
 	#import "UITableViewHeaderFooterView+RACSignalSupport.h"
 	#import "UITextField+RACSignalSupport.h"
 	#import "UITextView+RACSignalSupport.h"
-	#import "NSURLConnection+RACSupport.h"
+
+	#if TARGET_OS_IOS
+		#import "NSURLConnection+RACSupport.h"
+		#import "UIStepper+RACSignalSupport.h"
+		#import "UIDatePicker+RACSignalSupport.h"
+		#import "UIBarButtonItem+RACCommandSupport.h"
+		#import "UIAlertView+RACSignalSupport.h"
+		#import "UIActionSheet+RACSignalSupport.h"
+		#import "MKAnnotationView+RACSignalSupport.h"
+		#import "UIImagePickerController+RACSignalSupport.h"
+		#import "UIRefreshControl+RACCommandSupport.h"
+		#import "UISlider+RACSignalSupport.h"
+		#import "UISwitch+RACSignalSupport.h"
+	#endif
 #elif TARGET_OS_MAC
 	#import "NSControl+RACCommandSupport.h"
 	#import "NSControl+RACTextSignalSupport.h"
