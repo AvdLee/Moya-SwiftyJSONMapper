@@ -1,27 +1,27 @@
 PODS:
-  - Alamofire (3.2.0)
-  - Moya (6.1.3):
-    - Moya/Core (= 6.1.3)
-  - Moya-SwiftyJSONMapper (1.0.1):
-    - Moya-SwiftyJSONMapper/Core (= 1.0.1)
-  - Moya-SwiftyJSONMapper/Core (1.0.1):
-    - Moya (= 6.1.3)
+  - Alamofire (3.2.1)
+  - Moya (6.2.0):
+    - Moya/Core (= 6.2.0)
+  - Moya-SwiftyJSONMapper (1.0.3):
+    - Moya-SwiftyJSONMapper/Core (= 1.0.3)
+  - Moya-SwiftyJSONMapper/Core (1.0.3):
+    - Moya
     - SwiftyJSON (~> 2.3.2)
-  - Moya-SwiftyJSONMapper/ReactiveCocoa (1.0.1):
+  - Moya-SwiftyJSONMapper/ReactiveCocoa (1.0.3):
     - Moya-SwiftyJSONMapper/Core
-    - Moya/ReactiveCocoa (= 6.1.3)
+    - Moya/ReactiveCocoa
     - ReactiveCocoa
-  - Moya-SwiftyJSONMapper/RxSwift (1.0.1):
+  - Moya-SwiftyJSONMapper/RxSwift (1.0.3):
     - Moya-SwiftyJSONMapper/Core
     - Moya/RxSwift
     - RxSwift (~> 2.0.0)
-  - Moya/Core (6.1.3):
+  - Moya/Core (6.2.0):
     - Alamofire (~> 3.0)
     - Result (~> 1.0)
-  - Moya/ReactiveCocoa (6.1.3):
+  - Moya/ReactiveCocoa (6.2.0):
     - Moya/Core
     - ReactiveCocoa (= 4.0.0)
-  - Moya/RxSwift (6.1.3):
+  - Moya/RxSwift (6.2.0):
     - Moya/Core
     - RxSwift (~> 2.0)
   - ReactiveCocoa (4.0.0):
@@ -49,9 +49,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  Moya: 26b290a8d675c167ea6229ba08e07dce562265a5
-  Moya-SwiftyJSONMapper: 6d0ebc83259d81c3fa0d945a4720bbfe988a0794
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  Moya: a5e57a405584177027daab240f4d47baa0722562
+  Moya-SwiftyJSONMapper: 07f2386184685079a6eb06973584431151b2e0c3
   ReactiveCocoa: 69be555be30674b07a86b60a91b855063841acc0
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   RxSwift: d83246efa6f16c50c143bec134649d045498f601

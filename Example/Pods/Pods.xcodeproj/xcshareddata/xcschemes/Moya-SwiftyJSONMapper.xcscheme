@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'ABC40CA8959237F39CAD2843'
+               BlueprintIdentifier = '900B241C17D029BFB6B28F1F'
                BlueprintName = 'Moya-SwiftyJSONMapper'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Moya_SwiftyJSONMapper.framework'>
