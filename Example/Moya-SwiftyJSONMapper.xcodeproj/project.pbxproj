@@ -49,6 +49,7 @@
 		73289B5B1C580B6A002B25C9 /* GetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetResponse.swift; sourceTree = "<group>"; };
 		73289B5E1C58117B002B25C9 /* array_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = array_response.json; sourceTree = "<group>"; };
 		73289B5F1C58117B002B25C9 /* object_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = object_response.json; sourceTree = "<group>"; };
+		73B7CA9A1D0188EA005F7369 /* Changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		A1C6C3DBB566E94DAD186682 /* Pods-Moya-SwiftyJSONMapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-SwiftyJSONMapper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-SwiftyJSONMapper_Tests/Pods-Moya-SwiftyJSONMapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C9ED04BFF222533D6840CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B87B4B79C8D4F5C1E2040650 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 			children = (
 				E67951E147B507A94CCAF192 /* Moya-SwiftyJSONMapper.podspec */,
 				B0C9ED04BFF222533D6840CC /* README.md */,
+				73B7CA9A1D0188EA005F7369 /* Changelog.md */,
 				B87B4B79C8D4F5C1E2040650 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
