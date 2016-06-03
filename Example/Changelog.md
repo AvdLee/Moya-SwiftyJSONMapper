@@ -1,3 +1,3 @@
-# 1.0.3
+# 1.0.4
 
-- Podspec fix to update to the latest RxSwift
+- Podspec fix to make sure the latest RxSwift version is used
