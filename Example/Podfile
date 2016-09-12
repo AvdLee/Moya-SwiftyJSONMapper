@@ -1,13 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'Moya-SwiftyJSONMapper_Example', :exclusive => true do
+
+target 'Moya-SwiftyJSONMapper_Example' do
   pod 'Moya-SwiftyJSONMapper', :path => '../'
   pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
   pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
 end
 
-target 'Moya-SwiftyJSONMapper_Tests', :exclusive => true do
+target 'Moya-SwiftyJSONMapper_Tests' do
   pod 'Moya-SwiftyJSONMapper', :path => '../'
   pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
   pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
