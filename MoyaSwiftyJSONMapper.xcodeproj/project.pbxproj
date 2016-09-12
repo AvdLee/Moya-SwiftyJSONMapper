@@ -12,7 +12,7 @@
 		0B6FAEF71D868CE200965D4E /* Response+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF21D868CE200965D4E /* Response+SwiftyJSONMapper.swift */; };
 		0B6FAEF81D868CE200965D4E /* Observable+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */; };
 		0BC2FFED1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BC2FFF41D868C4700FEF3BA /* Moya-SwiftyJSONMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC2FFE91D868C4700FEF3BA /* Moya-SwiftyJSONMapper.framework */; };
+		0BC2FFF41D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */; };
 		0BC2FFF91D868C4700FEF3BA /* Moya_SwiftyJSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC2FFF81D868C4700FEF3BA /* Moya_SwiftyJSONMapperTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +31,10 @@
 		0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignalProducer+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B6FAEF21D868CE200965D4E /* Response+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
-		0BC2FFE91D868C4700FEF3BA /* Moya-SwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Moya-SwiftyJSONMapper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moya-SwiftyJSONMapper.h"; sourceTree = "<group>"; };
 		0BC2FFEE1D868C4700FEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BC2FFF31D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moya-SwiftyJSONMapperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC2FFF31D868C4700FEF3BA /* MoyaSwiftyJSONMapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaSwiftyJSONMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC2FFF81D868C4700FEF3BA /* Moya_SwiftyJSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moya_SwiftyJSONMapperTests.swift; sourceTree = "<group>"; };
 		0BC2FFFA1D868C4700FEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC2FFF41D868C4700FEF3BA /* Moya-SwiftyJSONMapper.framework in Frameworks */,
+				0BC2FFF41D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 		0BC2FFDF1D868C4700FEF3BA = {
 			isa = PBXGroup;
 			children = (
-				0BC2FFEB1D868C4700FEF3BA /* Moya-SwiftyJSONMapper */,
+				0BC2FFEB1D868C4700FEF3BA /* MoyaSwiftyJSONMapper */,
 				0BC2FFF71D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests */,
 				0BC2FFEA1D868C4700FEF3BA /* Products */,
 			);
@@ -97,19 +97,20 @@
 		0BC2FFEA1D868C4700FEF3BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BC2FFE91D868C4700FEF3BA /* Moya-SwiftyJSONMapper.framework */,
-				0BC2FFF31D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests.xctest */,
+				0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */,
+				0BC2FFF31D868C4700FEF3BA /* MoyaSwiftyJSONMapperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0BC2FFEB1D868C4700FEF3BA /* Moya-SwiftyJSONMapper */ = {
+		0BC2FFEB1D868C4700FEF3BA /* MoyaSwiftyJSONMapper */ = {
 			isa = PBXGroup;
 			children = (
 				0B6FAEEE1D868CE200965D4E /* Source */,
 				0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */,
 				0BC2FFEE1D868C4700FEF3BA /* Info.plist */,
 			);
+			name = MoyaSwiftyJSONMapper;
 			path = "Moya-SwiftyJSONMapper";
 			sourceTree = "<group>";
 		};
@@ -136,9 +137,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0BC2FFE81D868C4700FEF3BA /* Moya-SwiftyJSONMapper */ = {
+		0BC2FFE81D868C4700FEF3BA /* MoyaSwiftyJSONMapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0BC2FFFD1D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "Moya-SwiftyJSONMapper" */;
+			buildConfigurationList = 0BC2FFFD1D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "MoyaSwiftyJSONMapper" */;
 			buildPhases = (
 				0BC2FFE41D868C4700FEF3BA /* Sources */,
 				0BC2FFE51D868C4700FEF3BA /* Frameworks */,
@@ -149,14 +150,14 @@
 			);
 			dependencies = (
 			);
-			name = "Moya-SwiftyJSONMapper";
+			name = MoyaSwiftyJSONMapper;
 			productName = "Moya-SwiftyJSONMapper";
-			productReference = 0BC2FFE91D868C4700FEF3BA /* Moya-SwiftyJSONMapper.framework */;
+			productReference = 0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0BC2FFF21D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests */ = {
+		0BC2FFF21D868C4700FEF3BA /* MoyaSwiftyJSONMapperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0BC200001D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "Moya-SwiftyJSONMapperTests" */;
+			buildConfigurationList = 0BC200001D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "MoyaSwiftyJSONMapperTests" */;
 			buildPhases = (
 				0BC2FFEF1D868C4700FEF3BA /* Sources */,
 				0BC2FFF01D868C4700FEF3BA /* Frameworks */,
@@ -167,9 +168,9 @@
 			dependencies = (
 				0BC2FFF61D868C4700FEF3BA /* PBXTargetDependency */,
 			);
-			name = "Moya-SwiftyJSONMapperTests";
+			name = MoyaSwiftyJSONMapperTests;
 			productName = "Moya-SwiftyJSONMapperTests";
-			productReference = 0BC2FFF31D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests.xctest */;
+			productReference = 0BC2FFF31D868C4700FEF3BA /* MoyaSwiftyJSONMapperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0BC2FFE31D868C4700FEF3BA /* Build configuration list for PBXProject "Moya-SwiftyJSONMapper" */;
+			buildConfigurationList = 0BC2FFE31D868C4700FEF3BA /* Build configuration list for PBXProject "MoyaSwiftyJSONMapper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -202,8 +203,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0BC2FFE81D868C4700FEF3BA /* Moya-SwiftyJSONMapper */,
-				0BC2FFF21D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests */,
+				0BC2FFE81D868C4700FEF3BA /* MoyaSwiftyJSONMapper */,
+				0BC2FFF21D868C4700FEF3BA /* MoyaSwiftyJSONMapperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,7 +251,7 @@
 /* Begin PBXTargetDependency section */
 		0BC2FFF61D868C4700FEF3BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0BC2FFE81D868C4700FEF3BA /* Moya-SwiftyJSONMapper */;
+			target = 0BC2FFE81D868C4700FEF3BA /* MoyaSwiftyJSONMapper */;
 			targetProxy = 0BC2FFF51D868C4700FEF3BA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -262,7 +263,7 @@
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapperTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hi.Moya-SwiftyJSONMapperTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MoyaSwiftyJSONMapperTests;
 			};
 			name = Debug;
 		};
@@ -272,7 +273,7 @@
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapperTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hi.Moya-SwiftyJSONMapperTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MoyaSwiftyJSONMapperTests;
 			};
 			name = Release;
 		};
@@ -377,7 +378,7 @@
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "hi.Moya-SwiftyJSONMapper";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.MoyaSwiftyJSONMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -393,7 +394,7 @@
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "hi.Moya-SwiftyJSONMapper";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.MoyaSwiftyJSONMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -402,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BC200001D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "Moya-SwiftyJSONMapperTests" */ = {
+		0BC200001D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "MoyaSwiftyJSONMapperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BC200011D868C4700FEF3BA /* Debug */,
@@ -411,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0BC2FFE31D868C4700FEF3BA /* Build configuration list for PBXProject "Moya-SwiftyJSONMapper" */ = {
+		0BC2FFE31D868C4700FEF3BA /* Build configuration list for PBXProject "MoyaSwiftyJSONMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BC2FFFB1D868C4700FEF3BA /* Debug */,
@@ -420,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0BC2FFFD1D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "Moya-SwiftyJSONMapper" */ = {
+		0BC2FFFD1D868C4700FEF3BA /* Build configuration list for PBXNativeTarget "MoyaSwiftyJSONMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BC2FFFE1D868C4700FEF3BA /* Debug */,
