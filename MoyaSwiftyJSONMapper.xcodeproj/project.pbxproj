@@ -11,6 +11,27 @@
 		0B6FAEF61D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */; };
 		0B6FAEF71D868CE200965D4E /* Response+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF21D868CE200965D4E /* Response+SwiftyJSONMapper.swift */; };
 		0B6FAEF81D868CE200965D4E /* Observable+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */; };
+		0B6FC3441D8695ED00965D4E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3021D8695ED00965D4E /* Alamofire.framework */; };
+		0B6FC34E1D8695ED00965D4E /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC30C1D8695ED00965D4E /* Moya.framework */; };
+		0B6FC34F1D8695ED00965D4E /* Moya.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC30D1D8695ED00965D4E /* Moya.framework.dSYM */; };
+		0B6FC3501D8695ED00965D4E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC30E1D8695ED00965D4E /* ReactiveCocoa.framework */; };
+		0B6FC3511D8695ED00965D4E /* ReactiveCocoa.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC30F1D8695ED00965D4E /* ReactiveCocoa.framework.dSYM */; };
+		0B6FC3521D8695ED00965D4E /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3101D8695ED00965D4E /* ReactiveMoya.framework */; };
+		0B6FC3531D8695ED00965D4E /* ReactiveMoya.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3111D8695ED00965D4E /* ReactiveMoya.framework.dSYM */; };
+		0B6FC3541D8695ED00965D4E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3121D8695ED00965D4E /* Result.framework */; };
+		0B6FC3551D8695ED00965D4E /* Result.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3131D8695ED00965D4E /* Result.framework.dSYM */; };
+		0B6FC3561D8695ED00965D4E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3141D8695ED00965D4E /* RxBlocking.framework */; };
+		0B6FC3571D8695ED00965D4E /* RxBlocking.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3151D8695ED00965D4E /* RxBlocking.framework.dSYM */; };
+		0B6FC3581D8695ED00965D4E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3161D8695ED00965D4E /* RxCocoa.framework */; };
+		0B6FC3591D8695ED00965D4E /* RxCocoa.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3171D8695ED00965D4E /* RxCocoa.framework.dSYM */; };
+		0B6FC35A1D8695ED00965D4E /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3181D8695ED00965D4E /* RxMoya.framework */; };
+		0B6FC35B1D8695ED00965D4E /* RxMoya.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3191D8695ED00965D4E /* RxMoya.framework.dSYM */; };
+		0B6FC35C1D8695ED00965D4E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31A1D8695ED00965D4E /* RxSwift.framework */; };
+		0B6FC35D1D8695ED00965D4E /* RxSwift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC31B1D8695ED00965D4E /* RxSwift.framework.dSYM */; };
+		0B6FC35E1D8695ED00965D4E /* RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31C1D8695ED00965D4E /* RxTests.framework */; };
+		0B6FC35F1D8695ED00965D4E /* RxTests.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC31D1D8695ED00965D4E /* RxTests.framework.dSYM */; };
+		0B6FC3601D8695ED00965D4E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */; };
+		0B6FC3611D8695ED00965D4E /* SwiftyJSON.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC31F1D8695ED00965D4E /* SwiftyJSON.framework.dSYM */; };
 		0BC2FFED1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BC2FFF41D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */; };
 		0BC2FFF91D868C4700FEF3BA /* Moya_SwiftyJSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC2FFF81D868C4700FEF3BA /* Moya_SwiftyJSONMapperTests.swift */; };
@@ -31,6 +52,27 @@
 		0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignalProducer+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B6FAEF21D868CE200965D4E /* Response+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
+		0B6FC3021D8695ED00965D4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		0B6FC30C1D8695ED00965D4E /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		0B6FC30D1D8695ED00965D4E /* Moya.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Moya.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC30E1D8695ED00965D4E /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		0B6FC30F1D8695ED00965D4E /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC3101D8695ED00965D4E /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveMoya.framework; sourceTree = "<group>"; };
+		0B6FC3111D8695ED00965D4E /* ReactiveMoya.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveMoya.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC3121D8695ED00965D4E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		0B6FC3131D8695ED00965D4E /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Result.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC3141D8695ED00965D4E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
+		0B6FC3151D8695ED00965D4E /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC3161D8695ED00965D4E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		0B6FC3171D8695ED00965D4E /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC3181D8695ED00965D4E /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxMoya.framework; sourceTree = "<group>"; };
+		0B6FC3191D8695ED00965D4E /* RxMoya.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxMoya.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC31A1D8695ED00965D4E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		0B6FC31B1D8695ED00965D4E /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC31C1D8695ED00965D4E /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTests.framework; sourceTree = "<group>"; };
+		0B6FC31D1D8695ED00965D4E /* RxTests.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxTests.framework.dSYM; sourceTree = "<group>"; };
+		0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		0B6FC31F1D8695ED00965D4E /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moya-SwiftyJSONMapper.h"; sourceTree = "<group>"; };
 		0BC2FFEE1D868C4700FEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +86,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6FC34E1D8695ED00965D4E /* Moya.framework in Frameworks */,
+				0B6FC3501D8695ED00965D4E /* ReactiveCocoa.framework in Frameworks */,
+				0B6FC35C1D8695ED00965D4E /* RxSwift.framework in Frameworks */,
+				0B6FC3581D8695ED00965D4E /* RxCocoa.framework in Frameworks */,
+				0B6FC3541D8695ED00965D4E /* Result.framework in Frameworks */,
+				0B6FC35A1D8695ED00965D4E /* RxMoya.framework in Frameworks */,
+				0B6FC3601D8695ED00965D4E /* SwiftyJSON.framework in Frameworks */,
+				0B6FC3441D8695ED00965D4E /* Alamofire.framework in Frameworks */,
+				0B6FC3521D8695ED00965D4E /* ReactiveMoya.framework in Frameworks */,
+				0B6FC35E1D8695ED00965D4E /* RxTests.framework in Frameworks */,
+				0B6FC3561D8695ED00965D4E /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +138,54 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		0B6FAEF91D86959000965D4E /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				0B6FC2F01D8695ED00965D4E /* Build */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		0B6FC2F01D8695ED00965D4E /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				0B6FC2F11D8695ED00965D4E /* iOS */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		0B6FC2F11D8695ED00965D4E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0B6FC3021D8695ED00965D4E /* Alamofire.framework */,
+				0B6FC30C1D8695ED00965D4E /* Moya.framework */,
+				0B6FC30D1D8695ED00965D4E /* Moya.framework.dSYM */,
+				0B6FC30E1D8695ED00965D4E /* ReactiveCocoa.framework */,
+				0B6FC30F1D8695ED00965D4E /* ReactiveCocoa.framework.dSYM */,
+				0B6FC3101D8695ED00965D4E /* ReactiveMoya.framework */,
+				0B6FC3111D8695ED00965D4E /* ReactiveMoya.framework.dSYM */,
+				0B6FC3121D8695ED00965D4E /* Result.framework */,
+				0B6FC3131D8695ED00965D4E /* Result.framework.dSYM */,
+				0B6FC3141D8695ED00965D4E /* RxBlocking.framework */,
+				0B6FC3151D8695ED00965D4E /* RxBlocking.framework.dSYM */,
+				0B6FC3161D8695ED00965D4E /* RxCocoa.framework */,
+				0B6FC3171D8695ED00965D4E /* RxCocoa.framework.dSYM */,
+				0B6FC3181D8695ED00965D4E /* RxMoya.framework */,
+				0B6FC3191D8695ED00965D4E /* RxMoya.framework.dSYM */,
+				0B6FC31A1D8695ED00965D4E /* RxSwift.framework */,
+				0B6FC31B1D8695ED00965D4E /* RxSwift.framework.dSYM */,
+				0B6FC31C1D8695ED00965D4E /* RxTests.framework */,
+				0B6FC31D1D8695ED00965D4E /* RxTests.framework.dSYM */,
+				0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */,
+				0B6FC31F1D8695ED00965D4E /* SwiftyJSON.framework.dSYM */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		0BC2FFDF1D868C4700FEF3BA = {
 			isa = PBXGroup;
 			children = (
+				0B6FAEF91D86959000965D4E /* Carthage */,
 				0BC2FFEB1D868C4700FEF3BA /* MoyaSwiftyJSONMapper */,
 				0BC2FFF71D868C4700FEF3BA /* Moya-SwiftyJSONMapperTests */,
 				0BC2FFEA1D868C4700FEF3BA /* Products */,
@@ -197,6 +295,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0BC2FFDF1D868C4700FEF3BA;
 			productRefGroup = 0BC2FFEA1D868C4700FEF3BA /* Products */;
@@ -214,6 +313,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6FC3591D8695ED00965D4E /* RxCocoa.framework.dSYM in Resources */,
+				0B6FC3571D8695ED00965D4E /* RxBlocking.framework.dSYM in Resources */,
+				0B6FC3531D8695ED00965D4E /* ReactiveMoya.framework.dSYM in Resources */,
+				0B6FC3511D8695ED00965D4E /* ReactiveCocoa.framework.dSYM in Resources */,
+				0B6FC34F1D8695ED00965D4E /* Moya.framework.dSYM in Resources */,
+				0B6FC35D1D8695ED00965D4E /* RxSwift.framework.dSYM in Resources */,
+				0B6FC3611D8695ED00965D4E /* SwiftyJSON.framework.dSYM in Resources */,
+				0B6FC3551D8695ED00965D4E /* Result.framework.dSYM in Resources */,
+				0B6FC35B1D8695ED00965D4E /* RxMoya.framework.dSYM in Resources */,
+				0B6FC35F1D8695ED00965D4E /* RxTests.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +484,41 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -391,6 +535,41 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

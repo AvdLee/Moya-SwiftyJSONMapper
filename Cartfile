@@ -1,0 +1,4 @@
+github "ReactiveCocoa/ReactiveCocoa"
+github "ReactiveX/RxSwift"
+github "SwiftyJSON/SwiftyJSON"
+github "Moya/Moya"
