@@ -42,7 +42,7 @@ extension ExampleAPI: JSONMappableTargetType {
         case .GetObject:
             return stubbedResponseFromJSONFile("object_response")
         case .GetArray:
-            return stubbedResponseFromJSONFile("array_response")   
+            return stubbedResponseFromJSONFile("array_response")
         }
     }
     var responseType: ALSwiftyJSONAble.Type {
@@ -65,15 +65,15 @@ extension ExampleAPI: JSONMappableTargetType {
 //}
 
 // Works but has al the mapping logic in it, I don't want that!
-func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
+func requestType<T: ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
     return RCStubbedProvider.request(target).flatMap(FlattenStrategy.Latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
         do {
             let jsonObject = try response.mapJSON()
-            
+
             guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
                 throw Error.JSONMapping(response)
             }
-            
+
             return SignalProducer(value: mappedObject)
         } catch let error {
             return SignalProducer(error: Moya.Error.Underlying(error as NSError))
@@ -85,7 +85,7 @@ protocol JSONMappableTargetType: TargetType {
     var responseType: ALSwiftyJSONAble.Type { get }
 }
 
-private func stubbedResponseFromJSONFile(filename: String, inDirectory subpath: String = "", bundle:NSBundle = NSBundle.mainBundle() ) -> NSData {
+private func stubbedResponseFromJSONFile(filename: String, inDirectory subpath: String = "", bundle: NSBundle = NSBundle.mainBundle() ) -> NSData {
     guard let path = bundle.pathForResource(filename, ofType: "json", inDirectory: subpath) else { return NSData() }
     return NSData(contentsOfFile: path) ?? NSData()
 }
