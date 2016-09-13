@@ -7,7 +7,8 @@
 //
 
 import XCTest
-@testable import MoyaSwiftyJSONMapper
+import RxSwift
+@testable import RxMoyaSwiftyJSONMapper
 
 class Moya_SwiftyJSONMapperTests: XCTestCase {
 
@@ -22,8 +23,13 @@ class Moya_SwiftyJSONMapperTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+     let x =  RXStubbedProvider.request(ExampleAPI.GetObject)
+      x.mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
+        print(response)
+        }, onError: { (error) -> Void in
+          print(error)
+      })
+
     }
 
     func testPerformanceExample() {
