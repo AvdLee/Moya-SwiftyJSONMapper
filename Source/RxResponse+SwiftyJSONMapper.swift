@@ -9,7 +9,7 @@ import Foundation
 import RxMoya
 import SwiftyJSON
 
-public extension Response {
+public extension RxMoya.Response {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
