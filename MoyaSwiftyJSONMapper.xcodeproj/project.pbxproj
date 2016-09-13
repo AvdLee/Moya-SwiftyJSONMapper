@@ -28,8 +28,6 @@
 		0B6FC35B1D8695ED00965D4E /* RxMoya.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3191D8695ED00965D4E /* RxMoya.framework.dSYM */; };
 		0B6FC35C1D8695ED00965D4E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31A1D8695ED00965D4E /* RxSwift.framework */; };
 		0B6FC35D1D8695ED00965D4E /* RxSwift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC31B1D8695ED00965D4E /* RxSwift.framework.dSYM */; };
-		0B6FC35E1D8695ED00965D4E /* RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31C1D8695ED00965D4E /* RxTests.framework */; };
-		0B6FC35F1D8695ED00965D4E /* RxTests.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC31D1D8695ED00965D4E /* RxTests.framework.dSYM */; };
 		0B6FC3601D8695ED00965D4E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */; };
 		0B6FC3611D8695ED00965D4E /* SwiftyJSON.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC31F1D8695ED00965D4E /* SwiftyJSON.framework.dSYM */; };
 		0BC2FFED1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,8 +67,6 @@
 		0B6FC3191D8695ED00965D4E /* RxMoya.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxMoya.framework.dSYM; sourceTree = "<group>"; };
 		0B6FC31A1D8695ED00965D4E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		0B6FC31B1D8695ED00965D4E /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
-		0B6FC31C1D8695ED00965D4E /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTests.framework; sourceTree = "<group>"; };
-		0B6FC31D1D8695ED00965D4E /* RxTests.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxTests.framework.dSYM; sourceTree = "<group>"; };
 		0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		0B6FC31F1D8695ED00965D4E /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +91,6 @@
 				0B6FC3601D8695ED00965D4E /* SwiftyJSON.framework in Frameworks */,
 				0B6FC3441D8695ED00965D4E /* Alamofire.framework in Frameworks */,
 				0B6FC3521D8695ED00965D4E /* ReactiveMoya.framework in Frameworks */,
-				0B6FC35E1D8695ED00965D4E /* RxTests.framework in Frameworks */,
 				0B6FC3561D8695ED00965D4E /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,8 +169,6 @@
 				0B6FC3191D8695ED00965D4E /* RxMoya.framework.dSYM */,
 				0B6FC31A1D8695ED00965D4E /* RxSwift.framework */,
 				0B6FC31B1D8695ED00965D4E /* RxSwift.framework.dSYM */,
-				0B6FC31C1D8695ED00965D4E /* RxTests.framework */,
-				0B6FC31D1D8695ED00965D4E /* RxTests.framework.dSYM */,
 				0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */,
 				0B6FC31F1D8695ED00965D4E /* SwiftyJSON.framework.dSYM */,
 			);
@@ -323,7 +316,6 @@
 				0B6FC3611D8695ED00965D4E /* SwiftyJSON.framework.dSYM in Resources */,
 				0B6FC3551D8695ED00965D4E /* Result.framework.dSYM in Resources */,
 				0B6FC35B1D8695ED00965D4E /* RxMoya.framework.dSYM in Resources */,
-				0B6FC35F1D8695ED00965D4E /* RxTests.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +500,8 @@
 		0BC2FFFE1D868C4700FEF3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -518,40 +512,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hi.MoyaSwiftyJSONMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = MoyaSwiftyJSONMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -559,6 +526,8 @@
 		0BC2FFFF1D868C4700FEF3BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -569,40 +538,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Moya/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Result/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftJson/Carthage/Build/watchOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftyJSON/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = "Moya-SwiftyJSONMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hi.MoyaSwiftyJSONMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = MoyaSwiftyJSONMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
