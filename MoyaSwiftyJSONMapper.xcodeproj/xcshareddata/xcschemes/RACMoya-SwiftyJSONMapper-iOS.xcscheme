@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-               BuildableName = "MoyaSwiftyJSONMapper.framework"
+               BuildableName = "RACMoyaSwiftyJSONMapper.framework"
                BlueprintName = "RACMoyaSwiftyJSONMapper-iOS"
                ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-            BuildableName = "MoyaSwiftyJSONMapper.framework"
+            BuildableName = "RACMoyaSwiftyJSONMapper.framework"
             BlueprintName = "RACMoyaSwiftyJSONMapper-iOS"
             ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-            BuildableName = "MoyaSwiftyJSONMapper.framework"
+            BuildableName = "RACMoyaSwiftyJSONMapper.framework"
             BlueprintName = "RACMoyaSwiftyJSONMapper-iOS"
             ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-            BuildableName = "MoyaSwiftyJSONMapper.framework"
+            BuildableName = "RACMoyaSwiftyJSONMapper.framework"
             BlueprintName = "RACMoyaSwiftyJSONMapper-iOS"
             ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
          </BuildableReference>

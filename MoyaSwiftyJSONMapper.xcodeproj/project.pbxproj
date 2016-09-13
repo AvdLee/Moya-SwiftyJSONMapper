@@ -46,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0B142E931D87F8020025A94C /* RACMoyaSwiftyJSONMapper-iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RACMoyaSwiftyJSONMapper-iOS-Info.plist"; sourceTree = "<group>"; };
-		0B142EB31D8800100025A94C /* RxMoyaSwiftyJSONMapper-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RxMoyaSwiftyJSONMapper-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B142EB31D8800100025A94C /* RxMoyaSwiftyJSONMapper-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "RxMoyaSwiftyJSONMapper-iOS.framework"; path = RxMoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B142EB51D8800660025A94C /* RxMoyaSwiftyJSONMapper-iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RxMoyaSwiftyJSONMapper-iOS-Info.plist"; sourceTree = "<group>"; };
 		0B6FAEEF1D868CE200965D4E /* ALSwiftyJSONAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSwiftyJSONAble.swift; sourceTree = "<group>"; };
 		0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignalProducer+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		0B6FC3181D8695ED00965D4E /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxMoya.framework; sourceTree = "<group>"; };
 		0B6FC31A1D8695ED00965D4E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
-		0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC2FFE91D868C4700FEF3BA /* MoyaSwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MoyaSwiftyJSONMapper.framework; path = RACMoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC2FFEC1D868C4700FEF3BA /* Moya-SwiftyJSONMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moya-SwiftyJSONMapper.h"; sourceTree = "<group>"; };
 		0BC2FFF31D868C4700FEF3BA /* MoyaSwiftyJSONMapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaSwiftyJSONMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC2FFF81D868C4700FEF3BA /* Moya_SwiftyJSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moya_SwiftyJSONMapperTests.swift; sourceTree = "<group>"; };
@@ -248,7 +248,6 @@
 				0B142EA11D8800100025A94C /* Frameworks */,
 				0B142EAC1D8800100025A94C /* Headers */,
 				0B142EAE1D8800100025A94C /* Resources */,
-				0B142EAF1D8800100025A94C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,7 +266,6 @@
 				0BC2FFE51D868C4700FEF3BA /* Frameworks */,
 				0BC2FFE61D868C4700FEF3BA /* Headers */,
 				0BC2FFE71D868C4700FEF3BA /* Resources */,
-				0B53BB481D87EC3E008782A5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -358,57 +356,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0B142EAF1D8800100025A94C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxTests.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		0B53BB481D87EC3E008782A5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxTests.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B142E9C1D8800100025A94C /* Sources */ = {
