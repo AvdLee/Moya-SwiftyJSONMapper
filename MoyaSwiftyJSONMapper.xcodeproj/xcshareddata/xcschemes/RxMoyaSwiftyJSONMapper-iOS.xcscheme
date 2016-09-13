@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-               BuildableName = "MoyaSwiftyJSONMapper.framework"
-               BlueprintName = "MoyaSwiftyJSONMapper-iOS"
+               BlueprintIdentifier = "0B142E9B1D8800100025A94C"
+               BuildableName = "RxMoyaSwiftyJSONMapper-iOS.framework"
+               BlueprintName = "RxMoyaSwiftyJSONMapper-iOS"
                ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BC2FFF21D868C4700FEF3BA"
-               BuildableName = "MoyaSwiftyJSONMapperTests.xctest"
-               BlueprintName = "MoyaSwiftyJSONMapperTests"
-               ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-            BuildableName = "MoyaSwiftyJSONMapper.framework"
-            BlueprintName = "MoyaSwiftyJSONMapper-iOS"
-            ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-            BuildableName = "MoyaSwiftyJSONMapper.framework"
-            BlueprintName = "MoyaSwiftyJSONMapper-iOS"
+            BlueprintIdentifier = "0B142E9B1D8800100025A94C"
+            BuildableName = "RxMoyaSwiftyJSONMapper-iOS.framework"
+            BlueprintName = "RxMoyaSwiftyJSONMapper-iOS"
             ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BC2FFE81D868C4700FEF3BA"
-            BuildableName = "MoyaSwiftyJSONMapper.framework"
-            BlueprintName = "MoyaSwiftyJSONMapper-iOS"
+            BlueprintIdentifier = "0B142E9B1D8800100025A94C"
+            BuildableName = "RxMoyaSwiftyJSONMapper-iOS.framework"
+            BlueprintName = "RxMoyaSwiftyJSONMapper-iOS"
             ReferencedContainer = "container:MoyaSwiftyJSONMapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
