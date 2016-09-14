@@ -10,5 +10,5 @@ import Foundation
 import SwiftyJSON
 
 public protocol ALSwiftyJSONAble {
-    init?(jsonData:JSON)
+    init?(jsonData: JSON)
 }

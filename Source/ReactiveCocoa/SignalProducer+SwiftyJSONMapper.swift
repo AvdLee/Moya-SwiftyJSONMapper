@@ -10,7 +10,7 @@ import Moya
 import SwiftyJSON
 
 /// Extension for processing Responses into Mappable objects through ObjectMapper
-extension SignalProducerType where Value == Moya.Response, Error == Moya.Error {
+extension SignalProducerType where Value == Response, Error == Moya.Error {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
@@ -30,10 +30,10 @@ extension SignalProducerType where Value == Moya.Response, Error == Moya.Error {
 }
 
 /// Maps throwable to SignalProducer
-private func unwrapThrowable<T>(throwable: () throws -> T) -> SignalProducer<T, Moya.Error> {
+private func unwrapThrowable<T>(throwable: () throws -> T) -> SignalProducer<T, Error> {
     do {
         return SignalProducer(value: try throwable())
     } catch {
-        return SignalProducer(error: error as! Moya.Error)
+        return SignalProducer(error: error as! Error)
     }
 }

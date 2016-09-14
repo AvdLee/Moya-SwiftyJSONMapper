@@ -58,30 +58,7 @@ class Tests: XCTestCase {
             disposable.dispose()
         }
     }
-    
-    func testRxSwiftMappingObject(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
-        var getResponseObject:GetResponse?
-        var errorValue:ErrorType?
-        
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
-            getResponseObject = response
-        }, onError: { (error) -> Void in
-            errorValue = error
-            expectation.fulfill()
-        }, onCompleted: { () -> Void in
-            expectation.fulfill()
-        })
-        
-        waitForExpectationsWithTimeout(10.0) { (error) in
-            XCTAssertNil(errorValue, "We have an unexpected error value")
-            XCTAssertNotNil(getResponseObject, "We should have a parsed getResponseObject")
-            
-            disposable.dispose()
-        }
-    }
-    
     func testCoreMappingArray(){
         let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse.")
         
@@ -133,29 +110,5 @@ class Tests: XCTestCase {
             disposable.dispose()
         }
     }
-    
-    func testRxSwiftMappingArray(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
-        var getResponseArray:[GetResponse]?
-        var errorValue:ErrorType?
-        
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetArray).mapArray(GetResponse).subscribe(onNext: { (response) -> Void in
-            getResponseArray = response
-        }, onError: { (error) -> Void in
-            errorValue = error
-            expectation.fulfill()
-        }, onCompleted: { () -> Void in
-            expectation.fulfill()
-        })
-        
-        waitForExpectationsWithTimeout(10.0) { (error) in
-            XCTAssertNil(errorValue, "We have an unexpected error value")
-            XCTAssertNotNil(getResponseArray, "We should have a parsed getResponseObject")
-            
-            disposable.dispose()
-        }
-    }
-    
-    
 }
