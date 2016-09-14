@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+
+target 'Moya-SwiftyJSONMapper_Example' do
+  pod 'Moya-SwiftyJSONMapper', :path => '../../'
+  pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../../'
+end
+
+target 'Moya-SwiftyJSONMapper_Tests' do
+  pod 'Moya-SwiftyJSONMapper', :path => '../../'
+  pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../../'  
+end

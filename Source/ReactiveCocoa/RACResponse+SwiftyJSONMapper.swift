@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ReactiveMoya
+import Moya
 import SwiftyJSON
 
 public extension Response {

@@ -17,7 +17,8 @@
 		0B115EAF1D88DF0900FAFCFD /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC3181D8695ED00965D4E /* RxMoya.framework */; };
 		0B115EB01D88DF0900FAFCFD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31A1D8695ED00965D4E /* RxSwift.framework */; };
 		0B115EB11D88DF0900FAFCFD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC31E1D8695ED00965D4E /* SwiftyJSON.framework */; };
-		0B142E9E1D8800100025A94C /* RxResponse+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF21D868CE200965D4E /* RxResponse+SwiftyJSONMapper.swift */; };
+		0B115EB31D88E57700FAFCFD /* RACResponse+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B115EB21D88E57700FAFCFD /* RACResponse+SwiftyJSONMapper.swift */; };
+		0B115EB61D88E62F00FAFCFD /* RxResponse+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B115EB41D88E57D00FAFCFD /* RxResponse+SwiftyJSONMapper.swift */; };
 		0B142E9F1D8800100025A94C /* ALSwiftyJSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEEF1D868CE200965D4E /* ALSwiftyJSONAble.swift */; };
 		0B142EA01D8800100025A94C /* Observable+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */; };
 		0B142EA21D8800100025A94C /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FC30C1D8695ED00965D4E /* Moya.framework */; };
@@ -32,7 +33,6 @@
 		0B142EB61D8800660025A94C /* RxMoyaSwiftyJSONMapper-iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B142EB51D8800660025A94C /* RxMoyaSwiftyJSONMapper-iOS-Info.plist */; };
 		0B15FF2F1D88B69100FE4DAD /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15FF2D1D88B67500FE4DAD /* TestHelper.swift */; };
 		0B15FF321D88B6C000FE4DAD /* GetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15FF301D88B6BE00FE4DAD /* GetResponse.swift */; };
-		0B15FF351D88C1B900FE4DAD /* RACResponse+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15FF341D88C1B900FE4DAD /* RACResponse+SwiftyJSONMapper.swift */; };
 		0B15FF371D88C3AB00FE4DAD /* RACMoyaSwiftyJSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15FF361D88C3AB00FE4DAD /* RACMoyaSwiftyJSONMapperTests.swift */; };
 		0B6FAEF51D868CE200965D4E /* ALSwiftyJSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEEF1D868CE200965D4E /* ALSwiftyJSONAble.swift */; };
 		0B6FAEF61D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */; };
@@ -57,16 +57,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B115EB21D88E57700FAFCFD /* RACResponse+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACResponse+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
+		0B115EB41D88E57D00FAFCFD /* RxResponse+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxResponse+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B142E931D87F8020025A94C /* RACMoyaSwiftyJSONMapper-iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RACMoyaSwiftyJSONMapper-iOS-Info.plist"; sourceTree = "<group>"; };
 		0B142EB31D8800100025A94C /* RxMoyaSwiftyJSONMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxMoyaSwiftyJSONMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B142EB51D8800660025A94C /* RxMoyaSwiftyJSONMapper-iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RxMoyaSwiftyJSONMapper-iOS-Info.plist"; sourceTree = "<group>"; };
 		0B15FF2D1D88B67500FE4DAD /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		0B15FF301D88B6BE00FE4DAD /* GetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetResponse.swift; sourceTree = "<group>"; };
-		0B15FF341D88C1B900FE4DAD /* RACResponse+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RACResponse+SwiftyJSONMapper.swift"; path = "../RACResponse+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B15FF361D88C3AB00FE4DAD /* RACMoyaSwiftyJSONMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACMoyaSwiftyJSONMapperTests.swift; sourceTree = "<group>"; };
 		0B6FAEEF1D868CE200965D4E /* ALSwiftyJSONAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSwiftyJSONAble.swift; sourceTree = "<group>"; };
 		0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignalProducer+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
-		0B6FAEF21D868CE200965D4E /* RxResponse+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RxResponse+SwiftyJSONMapper.swift"; path = "../RxResponse+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SwiftyJSONMapper.swift"; sourceTree = "<group>"; };
 		0B6FC3021D8695ED00965D4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		0B6FC30C1D8695ED00965D4E /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 		0B6FAEF01D868CE200965D4E /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				0B15FF341D88C1B900FE4DAD /* RACResponse+SwiftyJSONMapper.swift */,
 				0B6FAEF11D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift */,
+				0B115EB21D88E57700FAFCFD /* RACResponse+SwiftyJSONMapper.swift */,
 			);
 			path = ReactiveCocoa;
 			sourceTree = "<group>";
@@ -175,8 +175,8 @@
 		0B6FAEF31D868CE200965D4E /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				0B6FAEF21D868CE200965D4E /* RxResponse+SwiftyJSONMapper.swift */,
 				0B6FAEF41D868CE200965D4E /* Observable+SwiftyJSONMapper.swift */,
+				0B115EB41D88E57D00FAFCFD /* RxResponse+SwiftyJSONMapper.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -449,8 +449,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B142E9E1D8800100025A94C /* RxResponse+SwiftyJSONMapper.swift in Sources */,
 				0B142E9F1D8800100025A94C /* ALSwiftyJSONAble.swift in Sources */,
+				0B115EB61D88E62F00FAFCFD /* RxResponse+SwiftyJSONMapper.swift in Sources */,
 				0B142EA01D8800100025A94C /* Observable+SwiftyJSONMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,7 +461,7 @@
 			files = (
 				0B6FAEF61D868CE200965D4E /* SignalProducer+SwiftyJSONMapper.swift in Sources */,
 				0B15FF371D88C3AB00FE4DAD /* RACMoyaSwiftyJSONMapperTests.swift in Sources */,
-				0B15FF351D88C1B900FE4DAD /* RACResponse+SwiftyJSONMapper.swift in Sources */,
+				0B115EB31D88E57700FAFCFD /* RACResponse+SwiftyJSONMapper.swift in Sources */,
 				0B6FAEF51D868CE200965D4E /* ALSwiftyJSONAble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

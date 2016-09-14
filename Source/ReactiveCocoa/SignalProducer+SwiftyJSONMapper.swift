@@ -6,11 +6,11 @@
 //
 
 import ReactiveCocoa
-import ReactiveMoya
+import Moya
 import SwiftyJSON
 
 /// Extension for processing Responses into Mappable objects through ObjectMapper
-extension SignalProducerType where Value == Response, Error == ReactiveMoya.Error {
+extension SignalProducerType where Value == Response, Error == Moya.Error {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
@@ -22,7 +22,7 @@ extension SignalProducerType where Value == Response, Error == ReactiveMoya.Erro
 
     /// Maps data received from the signal into an array of objects which implement the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func mapArray<T: ALSwiftyJSONAble>(type: T.Type) -> SignalProducer<[T], ReactiveMoya.Error> {
+    public func mapArray<T: ALSwiftyJSONAble>(type: T.Type) -> SignalProducer<[T], Error> {
         return producer.flatMap(.Latest) { response -> SignalProducer<[T], Error> in
             return unwrapThrowable { try response.mapArray(T) }
         }
@@ -30,7 +30,7 @@ extension SignalProducerType where Value == Response, Error == ReactiveMoya.Erro
 }
 
 /// Maps throwable to SignalProducer
-private func unwrapThrowable<T>(throwable: () throws -> T) -> SignalProducer<T, ReactiveMoya.Error> {
+private func unwrapThrowable<T>(throwable: () throws -> T) -> SignalProducer<T, Error> {
     do {
         return SignalProducer(value: try throwable())
     } catch {

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E87A1A52AD75DF98FC4212DA94950D1F70C62B27",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E87A1A52AD75DF98FC4212DA94950D1F70C62B27" : 0,
+    "6835198FF3E327AD573775050A2C93E880539C77" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4150BD77-9A6E-4F6F-AD11-2969BF63BDDC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E87A1A52AD75DF98FC4212DA94950D1F70C62B27" : "Moya-SwiftyJSONMapper\/",
+    "6835198FF3E327AD573775050A2C93E880539C77" : "..\/..\/Triple%20IT\/Klanten\/RTL\/Buienradar"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Moya-SwiftyJSONMapper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/Moya-SwiftyJSONMapper.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.triple-it.nl:rtl\/buienradar-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6835198FF3E327AD573775050A2C93E880539C77"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AvdLee\/Moya-SwiftyJSONMapper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E87A1A52AD75DF98FC4212DA94950D1F70C62B27"
+    }
+  ]
+}
