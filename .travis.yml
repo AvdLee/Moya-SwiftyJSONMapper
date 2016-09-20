@@ -20,8 +20,8 @@ branches:
  - master
 
 xcode_project: Example/Moya-SwiftyJSONMapper.xcodeproj
-xcode_scheme: Moya-SwiftyJSONMapper_Tests
-osx_image: xcode8.0
+xcode_scheme: Moya-SwiftyJSONMapper_Example
+osx_image: xcode8 
 # xcode_sdk: iphonesimulator8.3
 
 script:
