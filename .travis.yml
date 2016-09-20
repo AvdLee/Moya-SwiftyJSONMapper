@@ -13,23 +13,36 @@
 # - pod lib lint
 
 
+# language: objective-c
+
+# branches:
+#  only:
+#  - master
+
+# cache: cocoapods
+# podfile: Example/Podfile
+
+# before_install:
+# - gem install cocoapods # Since Travis is not always on latest version
+# - pod install --project-directory=Example
+
+# xcode_project: Example/Moya-SwiftyJSONMapper.xcodeproj
+# xcode_scheme: Moya-SwiftyJSONMapper_Example
+# osx_image: xcode8 
+# # xcode_sdk: iphonesimulator8.3
+
+# script:
+# - xcodebuild clean build test -project Example/Moya-SwiftyJSONMapper.xcodeproj -scheme Moya-SwiftyJSONMapper_Tests
+
 language: objective-c
-
-branches:
- only:
- - master
-
-cache: cocoapods
 podfile: Example/Podfile
+osx_image: xcode8
 
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod install --project-directory=Example
-
-xcode_project: Example/Moya-SwiftyJSONMapper.xcodeproj
-xcode_scheme: Moya-SwiftyJSONMapper_Example
-osx_image: xcode8 
-# xcode_sdk: iphonesimulator8.3
+before_install: 
+- gem install cocoapods
+- export LANG=en_US.UTF-8
+- brew update || brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 
 script:
-- xcodebuild clean build test -project Example/Moya-SwiftyJSONMapper.xcodeproj -scheme Moya-SwiftyJSONMapper_Tests
+- xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
