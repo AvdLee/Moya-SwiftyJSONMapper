@@ -7,6 +7,24 @@
 
 ## Installation
 
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate **`Moya-SwiftyJSONMapper`** into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "AvdLee/Moya-SwiftyJSONMapper"
+```
+
+#### CocoaPods
 Moya-SwiftyJSONMapper is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -92,8 +110,8 @@ RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe
 }).addDisposableTo(disposeBag)
 ```
 
-## ObjectMapper
-If you're using [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper), see [Moya-ObjectMapper](https://github.com/ivanbruel/Moya-ObjectMapper) which inspired me to create this one.
+## Other repo's
+If you're using [JASON](https://github.com/delba/JASON), checkout [Moya-JASONMapper](https://github.com/AvdLee/Moya-JASONMapper)
 
 ## Author
 
