@@ -2,12 +2,27 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-language: objective-c
+# language: objective-c
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
+# script:
+# - set -o pipefail && xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+# - pod lib lint
+
+
+language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_project: Example/Moya-SwiftyJSONMapper.xcodeproj
+xcode_scheme: Moya-SwiftyJSONMapper_Tests
+osx_image: xcode8.0
+# xcode_sdk: iphonesimulator8.3
+
 script:
-- set -o pipefail && xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+- xcodebuild clean build test -project Example/Moya-SwiftyJSONMapper.xcodeproj -scheme Moya-SwiftyJSONMapper_Tests
