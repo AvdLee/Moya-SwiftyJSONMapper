@@ -19,6 +19,13 @@ branches:
  only:
  - master
 
+cache: cocoapods
+podfile: Example/Podfile
+
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+- pod install --project-directory=Example
+
 xcode_project: Example/Moya-SwiftyJSONMapper.xcodeproj
 xcode_scheme: Moya-SwiftyJSONMapper_Example
 osx_image: xcode8 
