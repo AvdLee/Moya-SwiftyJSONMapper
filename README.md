@@ -40,14 +40,14 @@ final class GetResponse : ALSwiftyJSONAble {
 ```swift
 stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
     switch result {
-    case let .Success(response):
+    case let .success(response):
         do {
-            let getResponseObject = try response.mapObject(GetResponse)
+            let getResponseObject = try response.mapObject(type: GetResponse.self)
             print(getResponseObject)
         } catch {
             print(error)
         }
-    case let .Failure(error):
+    case let .failure(error):
         print(error)
     }
 }
@@ -55,7 +55,7 @@ stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
 
 ### 2. With ReactiveCocoa
 ```swift
-RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed: { (error) -> () in
+RCStubbedProvider.request(token: ExampleAPI.GetObject).mapObject(type: GetResponse.self).on(failed: { (error) -> () in
     print(error)
 }) { (response) -> () in
     print(response)
@@ -65,8 +65,7 @@ RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed
 ### 3. With RxSwift
 ```swift
 let disposeBag = DisposeBag()
-
-RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
+        RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(type: GetResponse.self).subscribe(onNext: { (response) -> Void in
     print(response)
 }, onError: { (error) -> Void in
     print(error)
