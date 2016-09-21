@@ -32,7 +32,7 @@ platform :ios do
   end
 
   lane :tests do
-    scan(workspace: "Example/Moya-SwiftyJSONMapper.xcworkspace", scheme: "Moya-SwiftyJSONMapper-Example", clean: true)
+    scan(workspace: "Example/Moya-SwiftyJSONMapper.xcworkspace", scheme: "Moya-SwiftyJSONMapper-Example", clean: true, device: "iPhone 6")
   end
 
   lane :travis do
