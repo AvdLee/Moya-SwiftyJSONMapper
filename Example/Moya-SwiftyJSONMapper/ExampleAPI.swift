@@ -90,6 +90,10 @@ protocol JSONMappableTargetType: TargetType {
 
 private func stubbedResponseFromJSONFile(filename: String, inDirectory subpath: String = "", bundle:Bundle = Bundle.main ) -> Data {
     guard let path = bundle.path(forResource: filename, ofType: "json", inDirectory: subpath) else { return Data() }
-    return (try? Data(contentsOf: URL(string: path)!)) ?? Data()
-//    return Data(contentsOfFile: path) ?? Data()
+    
+    if let dataString = try? String(contentsOfFile: path), let data = dataString.data(using: String.Encoding.utf8){
+        return data
+    } else {
+        return Data()
+    }
 }
