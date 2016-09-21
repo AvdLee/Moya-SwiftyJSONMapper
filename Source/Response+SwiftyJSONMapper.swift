@@ -17,7 +17,7 @@ public extension Response {
         let jsonObject = try mapJSON()
         
         guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-            throw Error.JSONMapping(self)
+            throw Moya.Error.jsonMapping(self)
         }
         
         return mappedObject

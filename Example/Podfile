@@ -1,25 +1,20 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+def shared_pods
+    pod "SwiftyJSON", :git => 'https://github.com/IBM-Swift/SwiftyJSON'
+    pod "ReactiveSwift", :git => 'https://github.com/ReactiveCocoa/ReactiveSwift'
+    pod "Moya", :subspecs => ['RxSwift', 'ReactiveCocoa'], :branch => 'swift-3.0', :git => 'https://github.com/Moya/Moya.git'
+    
+    pod 'Moya-SwiftyJSONMapper', :path => '../'
+    pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
+    pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
+end
 
 target 'Moya-SwiftyJSONMapper_Example' do
-  pod 'Moya-SwiftyJSONMapper', :path => '../'
-  pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
-  pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
+    shared_pods
 end
 
 target 'Moya-SwiftyJSONMapper_Tests' do
-  pod 'Moya-SwiftyJSONMapper', :path => '../'
-  pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
-  pod 'Moya-SwiftyJSONMapper/ReactiveCocoa', :path => '../'
-  
-end
-
-# Build configurations
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '2.3'
-        end
-    end
+    shared_pods
 end

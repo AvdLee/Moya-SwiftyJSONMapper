@@ -9,7 +9,7 @@
 import UIKit
 import Moya
 import RxSwift
-import ReactiveCocoa
+import ReactiveSwift
 
 class ViewController: UIViewController {
 
@@ -24,30 +24,30 @@ class ViewController: UIViewController {
     
     func exampleRequestDirectMapping(){
         // This instead works, with type definition
-        let producer:SignalProducer<GetResponse, Moya.Error> = requestType(ExampleAPI.GetObject).on { (object) -> () in
-            print("Example origin \(object.origin)")
-        }
+        let producer:SignalProducer<GetResponse, Moya.Error> = requestType(target: ExampleAPI.GetObject).on(value: { (response) in
+            print("Example origin \(response.origin)")
+        })
         producer.start()
     }
     
     func coreObjectMapping(){
         stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
             switch result {
-            case let .Success(response):
+            case let .success(response):
                 do {
-                    let getResponseObject = try response.mapObject(GetResponse)
+                    let getResponseObject = try response.mapObject(type: GetResponse.self)
                     print(getResponseObject)
                 } catch {
                     print(error)
                 }
-            case let .Failure(error):
+            case let .failure(error):
                 print(error)
             }
         }
     }
     
     func reactiveCocoaObjectMapping(){
-        RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed: { (error) -> () in
+        RCStubbedProvider.request(token: ExampleAPI.GetObject).mapObject(type: GetResponse.self).on(failed: { (error) -> () in
             print(error)
         }) { (response) -> () in
             print(response)
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     
     func rxSwiftObjectMapping(){
         let disposeBag = DisposeBag()
-        RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
+        RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(type: GetResponse.self).subscribe(onNext: { (response) -> Void in
             print(response)
         }, onError: { (error) -> Void in
             print(error)

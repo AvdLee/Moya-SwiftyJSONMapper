@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/AvdLee/Moya-SwiftyJSONMapper.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/twannl'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
   s.requires_arc = true
