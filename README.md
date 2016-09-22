@@ -97,7 +97,9 @@ pod "Moya-SwiftyJSONMapper/ReactiveCocoa"
 
 
 ## Other repo's
-If you're using [JASON](https://github.com/delba/JASON), checkout [Moya-JASONMapper](https://github.com/AvdLee/Moya-JASONMapper)
+If you're using [JASON](https://github.com/delba/JASON) for parsing JSON data, checkout [Moya-JASONMapper](https://github.com/AvdLee/Moya-JASONMapper).
+
+If you're really into reactive programming, checkout [ALDataRequestView](https://github.com/AvdLee/ALDataRequestView) and handle those edge cases with ease! 
 
 ## Author
 
