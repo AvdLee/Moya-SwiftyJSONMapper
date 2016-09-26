@@ -6,6 +6,7 @@ notifications:
 before_install: 
 - gem uninstall cocoapods -a
 - gem install cocoapods --pre
+- gem install xcpretty
 - gem install bundler
 - bundle install
 #- bundle exec pod deintegrate
@@ -14,6 +15,6 @@ before_install:
 script:
 #- bundle exec fastlane travis
 #  - xcodebuild -workspace Postal.xcworkspace -scheme Postal-iOS -sdk iphonesimulator build
-- xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
+- xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty -c && exit ${PIPESTATUS[0]}
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)
