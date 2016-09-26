@@ -6,6 +6,8 @@ notifications:
 before_install: 
 - gem uninstall cocoapods -a
 - gem install cocoapods --pre
+- bundle exec pod deintegrate
+- bundle exec pod install
 #- gem install bundler
 #- bundle install
 script:
