@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift"
     ss.dependency "Moya"
-    ss.dependency "SwiftyJSON", "~>2.3.2"
+    ss.dependency "SwiftyJSON", "~> 3.0.0"
     ss.framework  = "Foundation"
   end
 
