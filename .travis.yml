@@ -1,8 +1,10 @@
 language: objective-c
 osx_image: xcode8
+podfile: Example/Podfile
 notifications:
   email: false
-before_install:
+before_install: 
+- gem install cocoapods
 - gem install bundler
 - bundle install
 script:
