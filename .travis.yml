@@ -1,13 +1,13 @@
-osx_image: xcode8
 language: objective-c
+osx_image: xcode8
 notifications:
   email: false
 before_install:
 - gem install bundler
 - bundle install
 script:
-- bundle exec fastlane travis
-after_success:
-- bundle exec fastlane push
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+#- bundle exec fastlane travis
+#  - xcodebuild -workspace Postal.xcworkspace -scheme Postal-iOS -sdk iphonesimulator build
+- xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
+#after_success:
+#  - bash <(curl -s https://codecov.io/bash)
