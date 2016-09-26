@@ -8,8 +8,8 @@ before_install:
 - gem install cocoapods --pre
 - gem install bundler
 - bundle install
-- bundle exec pod deintegrate
-- bundle exec pod install
+#- bundle exec pod deintegrate
+- bundle exec pod update
 
 script:
 #- bundle exec fastlane travis
