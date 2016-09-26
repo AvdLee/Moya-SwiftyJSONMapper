@@ -4,9 +4,10 @@ podfile: Example/Podfile
 notifications:
   email: false
 before_install: 
-- gem install cocoapods
-- gem install bundler
-- bundle install
+- gem uninstall cocoapods -a
+- gem install cocoapods --pre
+#- gem install bundler
+#- bundle install
 script:
 #- bundle exec fastlane travis
 #  - xcodebuild -workspace Postal.xcworkspace -scheme Postal-iOS -sdk iphonesimulator build
