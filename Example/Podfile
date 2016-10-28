@@ -2,9 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def shared_pods
-    pod "SwiftyJSON", :git => 'https://github.com/IBM-Swift/SwiftyJSON'
-    pod "ReactiveSwift", :git => 'https://github.com/ReactiveCocoa/ReactiveSwift'
-    pod "Moya", :subspecs => ['RxSwift', 'ReactiveCocoa'], :branch => 'swift-3.0', :git => 'https://github.com/Moya/Moya.git'
+    pod 'ReactiveSwift', '1.0.0-alpha.3'
     
     pod 'Moya-SwiftyJSONMapper', :path => '../'
     pod 'Moya-SwiftyJSONMapper/RxSwift', :path => '../'
