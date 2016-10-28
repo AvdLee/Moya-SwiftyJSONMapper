@@ -32,7 +32,7 @@ extension ExampleAPI: JSONMappableTargetType {
         }
     }
     var method: Moya.Method {
-        return .GET
+        return .get
     }
     var parameters: [String: Any]? {
         return nil
