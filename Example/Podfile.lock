@@ -41,11 +41,18 @@ DEPENDENCIES:
   - Moya-SwiftyJSONMapper (from `../`)
   - Moya-SwiftyJSONMapper/ReactiveCocoa (from `../`)
   - Moya-SwiftyJSONMapper/RxSwift (from `../`)
-  - ReactiveSwift (= 1.0.0-alpha.3)
+  - ReactiveSwift (from `https://github.com/ReactiveCocoa/ReactiveSwift`)
 
 EXTERNAL SOURCES:
   Moya-SwiftyJSONMapper:
     :path: "../"
+  ReactiveSwift:
+    :git: https://github.com/ReactiveCocoa/ReactiveSwift
+
+CHECKOUT OPTIONS:
+  ReactiveSwift:
+    :commit: e3c74c637e2fb738c33b607d844e2a20022bc4d8
+    :git: https://github.com/ReactiveCocoa/ReactiveSwift
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -57,6 +64,6 @@ SPEC CHECKSUMS:
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 4cb8d6bccea651caf5eb06e8873e0abb1ec12f49
+PODFILE CHECKSUM: c0213bf4b5d2fdbaf486207f2b7ffcec64f3def8
 
 COCOAPODS: 1.1.1
