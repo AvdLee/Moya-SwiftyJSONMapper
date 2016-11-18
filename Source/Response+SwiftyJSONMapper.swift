@@ -13,11 +13,11 @@ public extension Response {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func mapObject<T: ALSwiftyJSONAble>(type:T.Type) throws -> T {
+    public func map<T: ALSwiftyJSONAble>(to type:T.Type) throws -> T {
         let jsonObject = try mapJSON()
         
         guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-            throw Error.JSONMapping(self)
+            throw Error.jsonMapping(self)
         }
         
         return mappedObject
@@ -25,7 +25,7 @@ public extension Response {
 
     /// Maps data received from the signal into an array of objects which implement the ALSwiftyJSONAble protocol
     /// If the conversion fails, the signal errors.
-    public func mapArray<T: ALSwiftyJSONAble>(type:T.Type) throws -> [T] {
+    public func map<T: ALSwiftyJSONAble>(to type:[T.Type]) throws -> [T] {
         let jsonObject = try mapJSON()
         
         let mappedArray = JSON(jsonObject)
@@ -34,4 +34,17 @@ public extension Response {
         return mappedObjectsArray
     }
 
+}
+
+extension Response {
+    
+    @available(*, unavailable, renamed: "map(to:)")
+    public func mapObject<T: ALSwiftyJSONAble>(type:T.Type) throws -> T {
+        return try map(to: type)
+    }
+    
+    @available(*, unavailable, renamed: "map(to:)")
+    public func mapArray<T: ALSwiftyJSONAble>(type:T.Type) throws -> [T] {
+        return try map(to: [type])
+    }
 }

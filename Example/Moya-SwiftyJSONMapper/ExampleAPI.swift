@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 import Moya_SwiftyJSONMapper
-import ReactiveCocoa
+import ReactiveSwift
 import SwiftyJSON
 
-let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
-let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
-let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
+let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
     case GetObject
@@ -22,7 +22,7 @@ enum ExampleAPI {
 }
 
 extension ExampleAPI: JSONMappableTargetType {
-    var baseURL: NSURL { return NSURL(string: "https://httpbin.org")! }
+    var baseURL: URL { return URL(string: "https://httpbin.org")! }
     var path: String {
         switch self {
         case .GetObject:
@@ -32,17 +32,17 @@ extension ExampleAPI: JSONMappableTargetType {
         }
     }
     var method: Moya.Method {
-        return .GET
+        return .get
     }
-    var parameters: [String: AnyObject]? {
+    var parameters: [String: Any]? {
         return nil
     }
-    var sampleData: NSData {
+    var sampleData: Data {
         switch self {
         case .GetObject:
-            return stubbedResponseFromJSONFile("object_response")
+            return stubbedResponseFromJSONFile(filename: "object_response")
         case .GetArray:
-            return stubbedResponseFromJSONFile("array_response")   
+            return stubbedResponseFromJSONFile(filename: "array_response")   
         }
     }
     var responseType: ALSwiftyJSONAble.Type {
@@ -53,9 +53,12 @@ extension ExampleAPI: JSONMappableTargetType {
             return GetResponse.self
         }
     }
-  var multipartBody: [MultipartFormData]? {
-    return nil
-  }
+    var multipartBody: [MultipartFormData]? {
+        return nil
+    }
+    var task: Task {
+        return Task.request
+    }
 }
 
 // Then add an additional request method
@@ -66,17 +69,17 @@ extension ExampleAPI: JSONMappableTargetType {
 
 // Works but has al the mapping logic in it, I don't want that!
 func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
-    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.Latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
+    return RCStubbedProvider.request(token: target).flatMap(FlattenStrategy.latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
         do {
             let jsonObject = try response.mapJSON()
             
             guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-                throw Error.JSONMapping(response)
+                throw Error.jsonMapping(response)
             }
             
             return SignalProducer(value: mappedObject)
         } catch let error {
-            return SignalProducer(error: Moya.Error.Underlying(error as NSError))
+            return SignalProducer(error: Moya.Error.underlying(error as NSError))
         }
     })
 }
@@ -85,7 +88,12 @@ protocol JSONMappableTargetType: TargetType {
     var responseType: ALSwiftyJSONAble.Type { get }
 }
 
-private func stubbedResponseFromJSONFile(filename: String, inDirectory subpath: String = "", bundle:NSBundle = NSBundle.mainBundle() ) -> NSData {
-    guard let path = bundle.pathForResource(filename, ofType: "json", inDirectory: subpath) else { return NSData() }
-    return NSData(contentsOfFile: path) ?? NSData()
+private func stubbedResponseFromJSONFile(filename: String, inDirectory subpath: String = "", bundle:Bundle = Bundle.main ) -> Data {
+    guard let path = bundle.path(forResource: filename, ofType: "json", inDirectory: subpath) else { return Data() }
+    
+    if let dataString = try? String(contentsOfFile: path), let data = dataString.data(using: String.Encoding.utf8){
+        return data
+    } else {
+        return Data()
+    }
 }

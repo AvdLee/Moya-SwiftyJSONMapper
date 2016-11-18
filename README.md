@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/cocoapods/v/Moya-SwiftyJSONMapper.svg?style=flat)](http://cocoapods.org/pods/Moya-SwiftyJSONMapper)
 [![Build Status](https://travis-ci.org/AvdLee/Moya-SwiftyJSONMapper.svg?style=flat&branch=master)](https://travis-ci.org/AvdLee/Moya-SwiftyJSONMapper)
-[![Language](https://img.shields.io/badge/language-swift2.3-f48041.svg?style=flat)](https://developer.apple.com/swift)
+[![Language](https://img.shields.io/badge/language-swift3.0-f48041.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/cocoapods/l/Moya-SwiftyJSONMapper.svg?style=flat)](http://cocoapods.org/pods/Moya-SwiftyJSONMapper)
 [![Platform](https://img.shields.io/cocoapods/p/Moya-SwiftyJSONMapper.svg?style=flat)](http://cocoapods.org/pods/Moya-SwiftyJSONMapper)
 [![Twitter](https://img.shields.io/badge/twitter-@twannl-blue.svg?style=flat)](http://twitter.com/twannl)
@@ -23,7 +23,7 @@ import SwiftyJSON
 
 final class GetResponse : ALSwiftyJSONAble {
     
-    let url:NSURL?
+    let url:URL?
     let origin:String
     let args:[String: String]?
     
@@ -40,14 +40,14 @@ final class GetResponse : ALSwiftyJSONAble {
 ```swift
 stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
     switch result {
-    case let .Success(response):
+    case let .success(response):
         do {
-            let getResponseObject = try response.mapObject(GetResponse)
+            let getResponseObject = try response.map(to: GetResponse.self)
             print(getResponseObject)
         } catch {
             print(error)
         }
-    case let .Failure(error):
+    case let .failure(error):
         print(error)
     }
 }
@@ -55,7 +55,7 @@ stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
 
 ### 2. With ReactiveCocoa
 ```swift
-RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed: { (error) -> () in
+RCStubbedProvider.request(token: ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) -> () in
     print(error)
 }) { (response) -> () in
     print(response)
@@ -65,8 +65,7 @@ RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed
 ### 3. With RxSwift
 ```swift
 let disposeBag = DisposeBag()
-
-RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
+        RXStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
     print(response)
 }, onError: { (error) -> Void in
     print(error)
