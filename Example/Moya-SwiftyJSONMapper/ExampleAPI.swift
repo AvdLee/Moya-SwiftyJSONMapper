@@ -12,9 +12,9 @@ import Moya_SwiftyJSONMapper
 import ReactiveSwift
 import SwiftyJSON
 
-let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
-let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
-let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
+let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
     case GetObject
@@ -32,7 +32,7 @@ extension ExampleAPI: JSONMappableTargetType {
         }
     }
     var method: Moya.Method {
-        return .GET
+        return .get
     }
     var parameters: [String: Any]? {
         return nil

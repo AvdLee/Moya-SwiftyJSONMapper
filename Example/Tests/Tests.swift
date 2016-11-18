@@ -17,7 +17,7 @@ class Tests: XCTestCase {
             switch result {
             case let .success(response):
                 do {
-                    getResponseObject = try response.mapObject(type: GetResponse.self)
+                    getResponseObject = try response.map(to: GetResponse.self)
                     expectation.fulfill()
                 } catch {
                     expectation.fulfill()
@@ -42,7 +42,7 @@ class Tests: XCTestCase {
         var getResponseObject:GetResponse?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.GetObject).mapObject(type: GetResponse.self).on(value: { (response) in
+        let disposable = RCStubbedProvider.request(token: ExampleAPI.GetObject).map(to: GetResponse.self).on(value: { (response) in
             getResponseObject = response
         }, failed: { (error) in
             errorValue = error
@@ -64,7 +64,7 @@ class Tests: XCTestCase {
         var getResponseObject:GetResponse?
         var errorValue:Moya.Error?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(type: GetResponse.self).do(onError: { (error) in
+        let disposable = RXStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).do(onError: { (error) in
             if let error = error as? Moya.Error {
                 errorValue = error
             }
@@ -92,7 +92,7 @@ class Tests: XCTestCase {
             switch result {
             case let .success(response):
                 do {
-                    getResponseArray = try response.mapArray(type: GetResponse.self)
+                    getResponseArray = try response.map(to: [GetResponse.self])
                     expectation.fulfill()
                 } catch {
                     expectation.fulfill()
@@ -117,7 +117,7 @@ class Tests: XCTestCase {
         var getResponseArray:[GetResponse]?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.GetArray).mapArray(type: GetResponse.self)
+        let disposable = RCStubbedProvider.request(token: ExampleAPI.GetArray).map(to: [GetResponse.self])
             .on(value: { (response) in
                 getResponseArray = response
             }, failed: { (error) in
@@ -140,7 +140,7 @@ class Tests: XCTestCase {
         var getResponseArray:[GetResponse]?
         var errorValue:Moya.Error?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetArray).mapArray(type: GetResponse.self).do(onError: { (error) in
+        let disposable = RXStubbedProvider.request(ExampleAPI.GetArray).map(to: [GetResponse.self]).do(onError: { (error) in
             if let error = error as? Moya.Error {
                 errorValue = error
             }

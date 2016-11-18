@@ -12,7 +12,7 @@ import SwiftyJSON
 
 final class GetResponse : ALSwiftyJSONAble {
     
-    let url:NSURL?
+    let url:URL?
     let origin:String
     let args:[String: String]?
     

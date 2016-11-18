@@ -15,17 +15,17 @@ public extension ObservableType where E == Response {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func mapObject<T: ALSwiftyJSONAble>(type: T.Type) -> Observable<T> {
+    public func map<T: ALSwiftyJSONAble>(to type: T.Type) -> Observable<T> {
         return flatMap { response -> Observable<T> in
-            return Observable.just(try response.mapObject(type: type))
+            return Observable.just(try response.map(to: type))
         }
     }
 
     /// Maps data received from the signal into an array of objects which implement the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func mapArray<T: ALSwiftyJSONAble>(type: T.Type) -> Observable<[T]> {
+    public func map<T: ALSwiftyJSONAble>(to type: [T.Type]) -> Observable<[T]> {
         return flatMap { response -> Observable<[T]> in
-            return Observable.just(try response.mapArray(type: type))
+            return Observable.just(try response.map(to: type))
         }
     }
 }
