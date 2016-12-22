@@ -42,12 +42,12 @@ class Tests: XCTestCase {
         var getResponseObject:GetResponse?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.GetObject).map(to: GetResponse.self).on(value: { (response) in
-            getResponseObject = response
-        }, failed: { (error) in
+        let disposable = RCStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) in
             errorValue = error
         }, completed: {
             expectation.fulfill()
+        }, value: { (response) in
+            getResponseObject = response
         }).start()
         
         waitForExpectations(timeout: 10.0) { (error) in
@@ -117,13 +117,13 @@ class Tests: XCTestCase {
         var getResponseArray:[GetResponse]?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.GetArray).map(to: [GetResponse.self])
-            .on(value: { (response) in
-                getResponseArray = response
-            }, failed: { (error) in
+        let disposable = RCStubbedProvider.request(ExampleAPI.GetArray).map(to: [GetResponse.self])
+            .on(failed: { (error) in
                 errorValue = error
             }, completed: {
                 expectation.fulfill()
+            }, value: { (response) in
+                getResponseArray = response
             }).start()
         
         waitForExpectations(timeout: 10.0) { (error) in

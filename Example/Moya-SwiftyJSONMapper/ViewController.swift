@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func reactiveCocoaObjectMapping(){
-        RCStubbedProvider.request(token: ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) -> () in
+        RCStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) -> () in
             print(error)
         }) { (response) -> () in
             print(response)
