@@ -1,3 +1,8 @@
+# 2.2.0 
+- Updated for Moya 8.0.0
+- Updated for ReactiveSwift 1.0.0
+- Support for iOS 8 re-added
+
 # 2.1
 - Updated for Moya beta 6 & ReactiveSwift 4
 

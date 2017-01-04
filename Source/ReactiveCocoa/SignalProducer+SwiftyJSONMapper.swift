@@ -10,11 +10,11 @@ import Moya
 import SwiftyJSON
 
 /// Extension for processing Responses into Mappable objects through ObjectMapper
-extension SignalProducerProtocol where Value == Moya.Response, Error == Moya.Error {
+extension SignalProducerProtocol where Value == Moya.Response, Error == MoyaError {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func map<T: ALSwiftyJSONAble>(to type: T.Type) -> SignalProducer<T, Moya.Error> {
+    public func map<T: ALSwiftyJSONAble>(to type: T.Type) -> SignalProducer<T, MoyaError> {
         return producer.flatMap(.latest) { response -> SignalProducer<T, Moya.Error> in
             return unwrapThrowable { try response.map(to: type) }
         }
@@ -22,7 +22,7 @@ extension SignalProducerProtocol where Value == Moya.Response, Error == Moya.Err
 
     /// Maps data received from the signal into an array of objects which implement the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func map<T: ALSwiftyJSONAble>(to type: [T.Type]) -> SignalProducer<[T], Moya.Error> {
+    public func map<T: ALSwiftyJSONAble>(to type: [T.Type]) -> SignalProducer<[T], MoyaError> {
         return producer.flatMap(.latest) { response -> SignalProducer<[T], Moya.Error> in
             return unwrapThrowable { try response.map(to: type) }
         }
@@ -30,10 +30,10 @@ extension SignalProducerProtocol where Value == Moya.Response, Error == Moya.Err
 }
 
 /// Maps throwable to SignalProducer
-private func unwrapThrowable<T>(throwable: () throws -> T) -> SignalProducer<T, Moya.Error> {
+private func unwrapThrowable<T>(throwable: () throws -> T) -> SignalProducer<T, MoyaError> {
     do {
         return SignalProducer(value: try throwable())
     } catch {
-        return SignalProducer(error: error as! Moya.Error)
+        return SignalProducer(error: error as! MoyaError)
     }
 }

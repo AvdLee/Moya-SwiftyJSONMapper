@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Moya-SwiftyJSONMapper"
-  s.version          = "2.1"
+  s.version          = "2.2.0"
   s.summary          = "Map objects through SwiftyJSON in combination with Moya"
   s.description  = <<-EOS
     [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) bindings for
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/AvdLee/Moya-SwiftyJSONMapper.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/twannl'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '3.0'
   s.requires_arc = true
@@ -32,21 +32,21 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift"
-    ss.dependency "Moya", "8.0.0-beta.6"
+    ss.dependency "Moya", "~> 8.0.0"
     ss.dependency "SwiftyJSON"
     ss.framework  = "Foundation"
   end
 
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Source/RxSwift/*.swift"
-    ss.dependency "Moya/RxSwift", "8.0.0-beta.6"
+    ss.dependency "Moya/RxSwift"
     ss.dependency "Moya-SwiftyJSONMapper/Core"
   end
 
   s.subspec "ReactiveCocoa" do |ss|
     ss.source_files = "Source/ReactiveCocoa/*.swift"
-    ss.dependency "Moya/ReactiveCocoa", "8.0.0-beta.6"
+    ss.dependency "Moya/ReactiveCocoa"
     ss.dependency "Moya-SwiftyJSONMapper/Core"
-    ss.dependency "ReactiveSwift", "1.0.0-alpha.4"
+    ss.dependency "ReactiveSwift"
   end
 end

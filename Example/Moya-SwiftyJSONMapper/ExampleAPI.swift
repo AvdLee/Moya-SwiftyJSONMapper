@@ -59,6 +59,10 @@ extension ExampleAPI: JSONMappableTargetType {
     var task: Task {
         return Task.request
     }
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
 }
 
 // Then add an additional request method
@@ -74,12 +78,12 @@ func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, Mo
             let jsonObject = try response.mapJSON()
             
             guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-                throw Error.jsonMapping(response)
+                throw MoyaError.jsonMapping(response)
             }
             
             return SignalProducer(value: mappedObject)
         } catch let error {
-            return SignalProducer(error: Moya.Error.underlying(error as NSError))
+            return SignalProducer(error: MoyaError.underlying(error as NSError))
         }
     })
 }
