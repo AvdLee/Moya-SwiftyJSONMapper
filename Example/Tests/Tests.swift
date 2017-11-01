@@ -11,7 +11,7 @@ class Tests: XCTestCase {
         let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse.")
         
         var getResponseObject:GetResponse?
-        var errorValue:Moya.Error?
+        var errorValue:MoyaError?
         
         let cancellableRequest:Cancellable = stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
             switch result {
@@ -40,7 +40,7 @@ class Tests: XCTestCase {
         let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseObject:GetResponse?
-        var errorValue:Moya.Error?
+        var errorValue:MoyaError?
         
         let disposable = RCStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) in
             errorValue = error
@@ -62,9 +62,9 @@ class Tests: XCTestCase {
         let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseObject:GetResponse?
-        var errorValue:Moya.Error?
+        var errorValue:MoyaError?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).do(onError: { (error) in
+        let disposable = RXStubbedProvider.request(ExampleAPI.GetObject).map(GetResponse.self).do(onError: { (error) in
             if let error = error as? Moya.Error {
                 errorValue = error
             }
@@ -86,7 +86,7 @@ class Tests: XCTestCase {
         let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse.")
         
         var getResponseArray:[GetResponse]?
-        var errorValue:Moya.Error?
+        var errorValue:MoyaError?
         
         let cancellableRequest:Cancellable = stubbedProvider.request(ExampleAPI.GetArray) { (result) -> () in
             switch result {
@@ -115,7 +115,7 @@ class Tests: XCTestCase {
         let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseArray:[GetResponse]?
-        var errorValue:Moya.Error?
+        var errorValue:MoyaError?
         
         let disposable = RCStubbedProvider.request(ExampleAPI.GetArray).map(to: [GetResponse.self])
             .on(failed: { (error) in
@@ -138,9 +138,9 @@ class Tests: XCTestCase {
         let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseArray:[GetResponse]?
-        var errorValue:Moya.Error?
+        var errorValue:MoyaError?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetArray).map(to: [GetResponse.self]).do(onError: { (error) in
+        let disposable = RXStubbedProvider.request(ExampleAPI.GetArray).map([GetResponse.self]).do(onError: { (error) in
             if let error = error as? Moya.Error {
                 errorValue = error
             }

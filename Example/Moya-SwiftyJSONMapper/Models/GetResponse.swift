@@ -17,7 +17,7 @@ final class GetResponse : ALSwiftyJSONAble {
     let args:[String: String]?
     
     required init?(jsonData:JSON){
-        self.url = jsonData["url"].URL
+        self.url = jsonData["url"].url
         self.origin = jsonData["origin"].stringValue
         self.args = jsonData["args"].object as? [String : String]
     }

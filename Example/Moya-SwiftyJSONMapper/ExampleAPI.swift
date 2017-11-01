@@ -14,7 +14,6 @@ import SwiftyJSON
 
 let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 let RCStubbedProvider = ReactiveSwiftMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
-let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
     case GetObject
@@ -57,12 +56,14 @@ extension ExampleAPI: JSONMappableTargetType {
         return nil
     }
     var task: Task {
-        return Task.request
+        return .requestPlain
     }
     var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
-    
+    var headers: [String: String]? {
+        return nil
+    }
 }
 
 // Then add an additional request method
@@ -72,8 +73,8 @@ extension ExampleAPI: JSONMappableTargetType {
 //}
 
 // Works but has al the mapping logic in it, I don't want that!
-func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
-    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
+func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, MoyaError> {
+    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.latest, { (response) -> SignalProducer<T, MoyaError> in
         do {
             let jsonObject = try response.mapJSON()
             
@@ -83,7 +84,7 @@ func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, Mo
             
             return SignalProducer(value: mappedObject)
         } catch let error {
-            return SignalProducer(error: MoyaError.underlying(error as NSError))
+            return SignalProducer(error: MoyaError.underlying(error as NSError, response))
         }
     })
 }
