@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func reactiveCocoaObjectMapping(){
-        RCStubbedProvider.request(ExampleAPI.GetObject)
+        stubbedProvider.reactive.request(ExampleAPI.GetObject)
             .map(to: GetResponse.self)
             .on(failed: { (error) -> () in
                 print(error)
@@ -59,10 +59,13 @@ class ViewController: UIViewController {
     func rxSwiftObjectMapping(){
         let disposeBag = DisposeBag()
         stubbedProvider.rx.request(ExampleAPI.GetObject)
+            .map { response in
+                return try? response.map(to: GetResponse.self)
+            }
             .subscribe(onSuccess: { response in
-                 print(response)
+                print(response ?? "")
             }, onError: { error in
-                 print(error)
+                print(error)
             })
             .disposed(by: disposeBag)
     }

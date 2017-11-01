@@ -13,7 +13,6 @@ import ReactiveSwift
 import SwiftyJSON
 
 let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
-let RCStubbedProvider = ReactiveSwiftMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
     case GetObject
@@ -74,7 +73,7 @@ extension ExampleAPI: JSONMappableTargetType {
 
 // Works but has al the mapping logic in it, I don't want that!
 func requestType<T:ALSwiftyJSONAble>(target: ExampleAPI) -> SignalProducer<T, MoyaError> {
-    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.latest, { (response) -> SignalProducer<T, MoyaError> in
+    return stubbedProvider.reactive.request(target).flatMap(FlattenStrategy.latest, { (response) -> SignalProducer<T, MoyaError> in
         do {
             let jsonObject = try response.mapJSON()
             
