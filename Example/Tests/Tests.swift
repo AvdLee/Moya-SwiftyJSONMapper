@@ -65,9 +65,7 @@ class Tests: XCTestCase {
         var errorValue:MoyaError?
         
         let disposable = stubbedProvider.rx.request(ExampleAPI.GetObject)
-            .map { respone in
-                return try? respone.map(to: GetResponse.self)
-            }
+            .map(to: GetResponse.self)
             .do(onError: { (error) in
                 if let error = error as? MoyaError {
                 errorValue = error
@@ -145,9 +143,7 @@ class Tests: XCTestCase {
         var errorValue:MoyaError?
 
         let disposable = stubbedProvider.rx.request(ExampleAPI.GetArray)
-            .map { respone in
-                return try? respone.map(to: [GetResponse.self])
-            }
+            .map(to: [GetResponse.self])
             .do(onError: { (error) in
                 if let error = error as? MoyaError {
                     errorValue = error

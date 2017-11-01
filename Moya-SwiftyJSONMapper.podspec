@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Moya-SwiftyJSONMapper"
-  s.version          = "2.2.0"
+  s.version          = "2.3.0"
   s.summary          = "Map objects through SwiftyJSON in combination with Moya"
   s.description  = <<-EOS
     [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) bindings for

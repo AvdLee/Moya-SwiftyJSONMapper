@@ -59,11 +59,9 @@ class ViewController: UIViewController {
     func rxSwiftObjectMapping(){
         let disposeBag = DisposeBag()
         stubbedProvider.rx.request(ExampleAPI.GetObject)
-            .map { response in
-                return try? response.map(to: GetResponse.self)
-            }
+            .map(to: GetResponse.self)
             .subscribe(onSuccess: { response in
-                print(response ?? "")
+                print(response)
             }, onError: { error in
                 print(error)
             })
