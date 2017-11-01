@@ -19,7 +19,7 @@ end
 
 # Build configurations
 post_install do |installer|
-  swift4Targets = ['Moya', 'Moya-SwiftyJSONMapper']
+  swift4Targets = ['Moya', 'Moya-SwiftyJSONMapper', 'RxSwift', 'ReactiveSwift']
 
   installer.pods_project.targets.each do |target|
       if swift4Targets.include? target.name
