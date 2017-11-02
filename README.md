@@ -55,7 +55,7 @@ stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
 
 ### 2. With ReactiveCocoa
 ```swift
-RCStubbedProvider.request(token: ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) -> () in
+stubbedProvider.reactive.request(token: ExampleAPI.GetObject).map(to: GetResponse.self).on(failed: { (error) -> () in
     print(error)
 }) { (response) -> () in
     print(response)
@@ -65,7 +65,7 @@ RCStubbedProvider.request(token: ExampleAPI.GetObject).map(to: GetResponse.self)
 ### 3. With RxSwift
 ```swift
 let disposeBag = DisposeBag()
-        RXStubbedProvider.request(ExampleAPI.GetObject).map(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
+stubbedProvider.rx.request(ExampleAPI.GetObject).map(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
     print(response)
 }, onError: { (error) -> Void in
     print(error)

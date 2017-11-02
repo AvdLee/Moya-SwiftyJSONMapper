@@ -1,10 +1,10 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode9.1
 podfile: Example/Podfile
 notifications:
   email: false
 before_install: 
-- gem uninstall cocoapods -a
+- gem uninstall cocoapods -a -x
 - gem install cocoapods --pre
 - gem install xcpretty
 - gem install bundler
