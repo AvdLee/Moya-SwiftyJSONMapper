@@ -29,7 +29,7 @@ public extension Response {
         let jsonObject = try mapJSON()
         
         let mappedArray = JSON(jsonObject)
-        let mappedObjectsArray = mappedArray.arrayValue.flatMap { T(jsonData: $0) }
+        let mappedObjectsArray = mappedArray.arrayValue.compactMap { T(jsonData: $0) }
         
         return mappedObjectsArray
     }
