@@ -1,32 +1,32 @@
 PODS:
-  - Alamofire (4.7.3)
-  - Moya (11.0.2):
-    - Moya/Core (= 11.0.2)
-  - Moya-SwiftyJSONMapper (3.1.0):
-    - Moya-SwiftyJSONMapper/Core (= 3.1.0)
-  - Moya-SwiftyJSONMapper/Core (3.1.0):
-    - Moya (~> 11.0)
+  - Alamofire (4.8.2)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya-SwiftyJSONMapper (4.0.0):
+    - Moya-SwiftyJSONMapper/Core (= 4.0.0)
+  - Moya-SwiftyJSONMapper/Core (4.0.0):
+    - Moya (~> 13.0.1)
     - SwiftyJSON
-  - Moya-SwiftyJSONMapper/ReactiveCocoa (3.1.0):
+  - Moya-SwiftyJSONMapper/ReactiveCocoa (4.0.0):
     - Moya-SwiftyJSONMapper/Core
     - Moya/ReactiveSwift
-  - Moya-SwiftyJSONMapper/RxSwift (3.1.0):
+  - Moya-SwiftyJSONMapper/RxSwift (4.0.0):
     - Moya-SwiftyJSONMapper/Core
     - Moya/RxSwift
-  - Moya/Core (11.0.2):
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - Moya/ReactiveSwift (11.0.2):
+    - Result (~> 4.1)
+  - Moya/ReactiveSwift (13.0.1):
     - Moya/Core
-    - ReactiveSwift (~> 3.0)
-  - Moya/RxSwift (11.0.2):
+    - ReactiveSwift (~> 5.0)
+  - Moya/RxSwift (13.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
-  - ReactiveSwift (3.1.0):
-    - Result (~> 3.2)
-  - Result (3.2.4)
-  - RxSwift (4.3.0)
-  - SwiftyJSON (3.1.4)
+  - ReactiveSwift (5.0.1):
+    - Result (~> 4.1)
+  - Result (4.1.0)
+  - RxSwift (4.5.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Moya-SwiftyJSONMapper (from `../`)
@@ -47,14 +47,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Moya: a725035953bc1c0eb1be505ab903984501d82440
-  Moya-SwiftyJSONMapper: 7d63343fe826514ff710b5d39bdccda5cfce9dbb
-  ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxSwift: a9717a34df3179fe63563f76e046ad345078dd3a
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Moya-SwiftyJSONMapper: 46766fd2fa3543af73cb6e0674b732417e1c7a83
+  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: f4b96694fb484a90dfd563ab2c7e9cbd793722e9
+PODFILE CHECKSUM: b2070400d16a827b30d7177b42586267696afe2d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
