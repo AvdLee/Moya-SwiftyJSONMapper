@@ -19,16 +19,16 @@ end
 
 # Build configurations
 post_install do |installer|
-  swift4Targets = ['Moya', 'Moya-SwiftyJSONMapper', 'RxSwift', 'ReactiveSwift']
+  swift5Targets = ['Moya', 'Moya-SwiftyJSONMapper', 'RxSwift', 'ReactiveSwift']
 
   installer.pods_project.targets.each do |target|
-      if swift4Targets.include? target.name
+      if swift5Targets.include? target.name
         target.build_configurations.each do |config|
-          config.build_settings['SWIFT_VERSION'] = '4.0'
+          config.build_settings['SWIFT_VERSION'] = '5.0'
         end
       else
         target.build_configurations.each do |config|
-          config.build_settings['SWIFT_VERSION'] = '3.2'
+          config.build_settings['SWIFT_VERSION'] = '4.2'
         end
       end
   end
