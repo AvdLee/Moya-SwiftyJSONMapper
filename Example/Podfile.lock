@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (4.9.1)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya-SwiftyJSONMapper (4.0.0):
@@ -34,7 +34,7 @@ DEPENDENCIES:
   - Moya-SwiftyJSONMapper/RxSwift (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Moya
     - ReactiveSwift
@@ -47,7 +47,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Moya-SwiftyJSONMapper: 46766fd2fa3543af73cb6e0674b732417e1c7a83
   ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
@@ -57,4 +57,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b2070400d16a827b30d7177b42586267696afe2d
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
