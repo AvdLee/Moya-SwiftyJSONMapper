@@ -12,4 +12,4 @@ before_install:
 - bundle exec pod update --project-directory=Example/
 
 script:
-- xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' | xcpretty -c && exit ${PIPESTATUS[0]}
+- xcodebuild test -workspace Example/Moya-SwiftyJSONMapper.xcworkspace -scheme Moya-SwiftyJSONMapper-Example -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' | xcpretty -c && exit ${PIPESTATUS[0]}
