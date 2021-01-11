@@ -11,7 +11,7 @@ import Moya
 import SwiftyJSON
 
 /// Extension for processing Responses into Mappable objects through ObjectMapper
-extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
+extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
 
     /// Maps data received from the signal into an object which implements the ALSwiftyJSONAble protocol.
     /// If the conversion fails, the signal errors.
