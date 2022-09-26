@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Moya-SwiftyJSONMapper"
-  s.version          = "6.0.0"
+  s.version          = "6.1.0"
   s.summary          = "Map objects through SwiftyJSON in combination with Moya"
   s.description  = <<-EOS
     [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) bindings for
@@ -27,13 +27,13 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '3.0'
   s.requires_arc = true
-  s.swift_version = '5.1'
+  s.swift_version = '5.3'
 
   s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift"
-    ss.dependency "Moya", "~> 14"
+    ss.dependency "Moya", "~> 15"
     ss.dependency "SwiftyJSON"
     ss.framework  = "Foundation"
   end
